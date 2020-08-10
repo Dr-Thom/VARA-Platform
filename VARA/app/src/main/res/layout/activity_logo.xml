@@ -65,7 +65,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="30dp"
-        android:text="@string/continue"
+        android:text="@string/continueButton"
         android:textAlignment="center"
         android:textSize="28sp"
         android:textStyle="bold" />
