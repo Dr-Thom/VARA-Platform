@@ -3,6 +3,8 @@
     <color name = "colorPrimary">#6200EE</color>
     <color name = "colorPrimaryDark">#3700B3</color>
     <color name = "colorAccent">#03DAC5</color>
-    <color name = "PinkText">#FF23F4</color>
-    <color name = "GreenText">#FF4DE666</color>
+    <color name = "PinkText">#E72EBE</color>
+    <color name = "GreenText">#52afaa</color>
+    <color name = "Black">#090808</color>
+    <color name = "White">#FFF</color>
 </resources>

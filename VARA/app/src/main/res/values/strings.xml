@@ -5,7 +5,7 @@
     <string name="loginTitle">Login</string>
     <string name="loginEmail">Email</string>
     <string name="loginPassword">Password</string>
-    <string name="loginButton" translatable="false">Login</string>
+    <string name="loginButton">Login</string>
     <string name="signUpButton">Sign Up</string>
     <string name="homeButton">Home</string>
     <string name="continueButton">Continue</string>

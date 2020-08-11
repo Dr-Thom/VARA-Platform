@@ -97,7 +97,9 @@
         android:layout_marginEnd="40dp"
         android:layout_marginBottom="85dp"
         android:background="@color/PinkText"
-        android:text="@string/loginButton" />
+        android:text="@string/loginButton"
+        android:textColor="@color/White"
+        android:textSize="24sp" />
 
     <Button
         android:id="@+id/homeButton"
@@ -108,7 +110,9 @@
         android:layout_marginStart="40dp"
         android:layout_marginBottom="85dp"
         android:background="@color/PinkText"
-        android:text="@string/homeButton" />
+        android:text="@string/homeButton"
+        android:textColor="@color/White"
+        android:textSize="24sp" />
 
     <Button
         android:id="@+id/signupButton"
@@ -121,6 +125,8 @@
         android:layout_toStartOf="@+id/loginButton"
         android:layout_toEndOf="@+id/homeButton"
         android:background="@color/PinkText"
-        android:text="@string/signUpButton" />
+        android:text="@string/signUpButton"
+        android:textColor="@color/White"
+        android:textSize="24sp" />
 
 </RelativeLayout>
