@@ -53,7 +53,7 @@
         android:alpha="100"
         android:text="@string/moto"
         android:textAlignment="center"
-        android:textColor="@color/PinkText"
+        android:textColor="@color/colorPink"
         android:textSize="48sp"
         android:textStyle="bold"
         android:typeface="normal" />
@@ -65,10 +65,10 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="30dp"
-        android:background="@color/PinkText"
+        android:background="@color/colorPink"
         android:text="@string/continueButton"
         android:textAlignment="center"
-        android:textColor="@color/White"
+        android:textColor="@color/colorWhite"
         android:textSize="28sp"
         android:textStyle="bold" />
 

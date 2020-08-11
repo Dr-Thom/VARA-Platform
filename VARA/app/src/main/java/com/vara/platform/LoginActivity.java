@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
-    Button homeButton, loginButton;
+    Button homeButton, loginButton, signUpButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +18,7 @@ public class LoginActivity extends AppCompatActivity {
         getSupportActionBar().hide(); // hide the title bar
         homeButton = (Button) findViewById(R.id.homeButton);
         loginButton = (Button) findViewById(R.id.loginButton);
+        signUpButton = (Button) findViewById(R.id.signupButton);
 
 
          homeButton.setOnClickListener(new View.OnClickListener() {
@@ -37,6 +38,18 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 doSomething();
+            }
+        });
+
+        signUpButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+//                setContentView(R.layout.logopage);
+                Intent intent = new Intent(LoginActivity.this, SignUp.class);
+                startActivity(intent);
+                //Toast.makeText(MainActivity.this, "You clicked on ImageView", Toast.LENGTH_LONG).show();
+
             }
         });
     }

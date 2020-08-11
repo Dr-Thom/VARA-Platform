@@ -19,7 +19,7 @@
         android:layout_marginEnd="300dp"
         android:text="@string/loginTitle"
         android:textAlignment="center"
-        android:textColor="@color/PinkText"
+        android:textColor="@color/colorPink"
         android:textSize="46sp" />
 
     <EditText
@@ -39,7 +39,7 @@
         android:importantForAccessibility="auto"
         android:inputType="textEmailAddress"
         android:maxLength="200"
-        android:textColor="@color/colorAccent"
+        android:textColor="@color/colorText"
         android:textSize="48sp" />
 
     <EditText
@@ -59,7 +59,7 @@
         android:inputType="textPassword"
         android:maxLength="200"
         android:text="@string/loginPassword"
-        android:textColor="@color/colorAccent"
+        android:textColor="@color/colorText"
         android:textSize="48sp" />
 
     <TextView
@@ -72,7 +72,7 @@
         android:layout_marginTop="75dp"
         android:text="@string/loginEmail"
         android:textAlignment="textEnd"
-        android:textColor="@color/PinkText"
+        android:textColor="@color/colorPink"
         android:textSize="48sp" />
 
     <TextView
@@ -85,7 +85,7 @@
         android:layout_marginBottom="280dp"
         android:text="@string/loginPassword"
         android:textAlignment="textEnd"
-        android:textColor="@color/PinkText"
+        android:textColor="@color/colorPink"
         android:textSize="48sp" />
 
     <Button
@@ -96,9 +96,9 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="40dp"
         android:layout_marginBottom="85dp"
-        android:background="@color/PinkText"
+        android:background="@color/colorPink"
         android:text="@string/loginButton"
-        android:textColor="@color/White"
+        android:textColor="@color/colorWhite"
         android:textSize="24sp" />
 
     <Button
@@ -109,9 +109,9 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="40dp"
         android:layout_marginBottom="85dp"
-        android:background="@color/PinkText"
+        android:background="@color/colorPink"
         android:text="@string/homeButton"
-        android:textColor="@color/White"
+        android:textColor="@color/colorWhite"
         android:textSize="24sp" />
 
     <Button
@@ -124,9 +124,9 @@
         android:layout_marginBottom="85dp"
         android:layout_toStartOf="@+id/loginButton"
         android:layout_toEndOf="@+id/homeButton"
-        android:background="@color/PinkText"
+        android:background="@color/colorPink"
         android:text="@string/signUpButton"
-        android:textColor="@color/White"
+        android:textColor="@color/colorWhite"
         android:textSize="24sp" />
 
 </RelativeLayout>
