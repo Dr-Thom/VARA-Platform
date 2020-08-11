@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name = "colorPrimary">#6200EE</color>
-    <color name = "colorPrimaryDark">#3700B3</color>
-    <color name = "colorAccent">#03DAC5</color>
-    <color name = "PinkText">#E72EBE</color>
-    <color name = "GreenText">#52afaa</color>
-    <color name = "Black">#090808</color>
-    <color name = "White">#FFF</color>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="colorPink">#E72EBE</color>
+    <color name="colorText">#52AfAA</color>
+    <color name="colorBack">#090808</color>
 </resources>
