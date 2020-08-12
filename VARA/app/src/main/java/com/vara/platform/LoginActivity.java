@@ -78,7 +78,10 @@ public class LoginActivity extends AppCompatActivity {
 //        startActivity(intent);
         String email = editEmailAddress.getText().toString();
         String password = editPassword.getText().toString();
-
+        if (email.equals("") && password.equals("") || password.equals("") || email.equals("")) {
+            Toast.makeText(LoginActivity.this, "Please enter email and password", Toast.LENGTH_LONG).show();
+            return;
+        }
         mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     private static final String TAG = "TAG" ;
