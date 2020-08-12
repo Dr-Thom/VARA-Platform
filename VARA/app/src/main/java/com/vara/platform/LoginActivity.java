@@ -1,8 +1,10 @@
 package com.vara.platform;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -23,6 +25,7 @@ public class LoginActivity extends AppCompatActivity {
     TextView editEmailAddress, editPassword;
     FirebaseAuth mAuth;
     FirebaseFirestore fstor;
+    AlertDialog dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,12 +96,14 @@ public class LoginActivity extends AppCompatActivity {
                             Log.d(TAG, "signInWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
                             //updateUI(user);
-                            Toast.makeText(LoginActivity.this, "Sign-In Success", Toast.LENGTH_LONG).show();
+//                            Toast.makeText(LoginActivity.this, "Sign-In Success", Toast.LENGTH_LONG).show();
+                            show("Sign In","Success");
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "signInWithEmail:failure", task.getException());
-                            Toast.makeText(LoginActivity.this, "Authentication failed.",
-                                    Toast.LENGTH_SHORT).show();
+//                            Toast.makeText(LoginActivity.this, "Authentication failed.",
+//                                    Toast.LENGTH_SHORT).show();
+                            show("Sign In","Failed");
                             //updateUI(null);
                         }
 
@@ -106,5 +111,20 @@ public class LoginActivity extends AppCompatActivity {
                     }
                 });
 //
+    }
+    void show(String title, String message)
+    {
+        dialog = new AlertDialog.Builder(LoginActivity.this) // Pass a reference to your main activity here
+                .setTitle(title)
+                .setMessage(message)
+                .setPositiveButton("OK", new DialogInterface.OnClickListener()
+                {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i)
+                    {
+                        dialog.cancel();
+                    }
+                })
+                .show();
     }
 }
