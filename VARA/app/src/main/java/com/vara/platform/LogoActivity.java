@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class LogoActivity extends AppCompatActivity {
 
-    Button okbutton;
+    Button okbutton, signOffButton, adminButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,6 +19,8 @@ public class LogoActivity extends AppCompatActivity {
 //        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
 //                WindowManager.LayoutParams.FLAG_FULLSCREEN); //enable full screen
         okbutton = (Button) findViewById(R.id.okButton);
+        signOffButton = (Button) findViewById(R.id.signOffButton);
+        adminButton = (Button) findViewById(R.id.adminButton);
         //homeButton = (Button) findViewById(R.id.homeButton);
 
 
@@ -28,6 +30,31 @@ public class LogoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(LogoActivity.this, LoginActivity.class);
+                startActivity(intent);
+                //setContentView(R.layout.loginpage);
+                //Toast.makeText(MainActivity.this, "You clicked on ImageView", Toast.LENGTH_LONG).show();
+
+            }
+        });
+
+        signOffButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LogoActivity.this, LoginActivity.class);
+
+                startActivity(intent);
+                //setContentView(R.layout.loginpage);
+                //Toast.makeText(MainActivity.this, "You clicked on ImageView", Toast.LENGTH_LONG).show();
+
+            }
+        });
+
+        adminButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LogoActivity.this, MainActivity.class);
                 startActivity(intent);
                 //setContentView(R.layout.loginpage);
                 //Toast.makeText(MainActivity.this, "You clicked on ImageView", Toast.LENGTH_LONG).show();

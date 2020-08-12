@@ -115,7 +115,8 @@
         android:background="@color/colorPink"
         android:text="@string/homeButton"
         android:textColor="@color/colorWhite"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        android:visibility="gone"/>
 
     <Button
         android:id="@+id/signupButton"

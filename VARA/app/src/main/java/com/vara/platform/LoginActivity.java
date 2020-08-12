@@ -98,6 +98,9 @@ public class LoginActivity extends AppCompatActivity {
                             //updateUI(user);
 //                            Toast.makeText(LoginActivity.this, "Sign-In Success", Toast.LENGTH_LONG).show();
                             show("Sign In","Success");
+                            
+                            Intent intent = new Intent(LoginActivity.this, LogoActivity.class);
+                            startActivity(intent);
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "signInWithEmail:failure", task.getException());
