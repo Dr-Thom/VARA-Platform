@@ -34,7 +34,7 @@ public class SignUp extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sign_up);
+        setContentView(R.layout.activity_signup);
 
         fname = findViewById(R.id.Fname);
         lname = findViewById(R.id.Lname);
@@ -85,7 +85,7 @@ public class SignUp extends AppCompatActivity {
                     return;
                 }
                 if (Password.length() < 6) {
-                    password.setError("Password must be 6 characters long");
+                    password.setError("Password must be a minimum of 6 characters long");
                     return;
                 }
                 fAUTH.createUserWithEmailAndPassword(Email, Password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -95,14 +95,14 @@ public class SignUp extends AppCompatActivity {
                             Toast.makeText(SignUp.this, "User created", Toast.LENGTH_SHORT).show();
 
                             userID = fAUTH.getCurrentUser().getUid();
-                            DocumentReference documentReference = fstor.collection("UsersInfos").document(userID);
+                            DocumentReference documentReference = fstor.collection("UserInfo").document(userID);
                             Map<String ,Object> user = new HashMap<>();
-                            user.put("First name", firstName);
-                            user.put("last name",lastName);
-                            user.put("email", Email);
-                            user.put("password",Password);
-                            user.put("phone",phone);
-                            user.put("city",city);
+                            user.put("First Name", firstName);
+                            user.put("Last Name",lastName);
+                            user.put("Email", Email);
+                            user.put("Password",Password);
+                            user.put("Phone",phone);
+                            user.put("City",city);
 
                             documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                                 
