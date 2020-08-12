@@ -127,25 +127,26 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/buttonLogin"
-        app:layout_constraintHorizontal_bias="0.373"
+        app:layout_constraintHorizontal_bias="0.706"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textAddress"
-        app:layout_constraintVertical_bias="0.593" />
+        app:layout_constraintVertical_bias="0.586" />
 
     <Button
         android:id="@+id/buttonLogin"
         android:layout_width="190dp"
         android:layout_height="64dp"
-        android:layout_marginEnd="168dp"
+        android:layout_marginEnd="384dp"
         android:background="@color/colorPink"
         android:text="@string/log_in"
+        android:textAlignment="center"
         android:textColor="#FFF"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textAddress"
-        app:layout_constraintVertical_bias="0.593" />
+        app:layout_constraintVertical_bias="0.586" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

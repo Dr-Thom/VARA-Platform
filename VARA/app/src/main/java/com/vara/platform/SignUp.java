@@ -26,7 +26,7 @@ import java.util.Map;
 public class SignUp extends AppCompatActivity {
     public static final String TAG = "TAG";
     EditText fname, email, lname, phoneN, City, password;
-    Button signup, login;
+    Button signup, loginButton;
     FirebaseAuth fAUTH;
     FirebaseFirestore fstor;
     String userID;
@@ -43,6 +43,7 @@ public class SignUp extends AppCompatActivity {
         City = findViewById(R.id.textAddress);
         fAUTH = FirebaseAuth.getInstance();
         signup = findViewById(R.id.buttonSignUp);
+        loginButton = (Button) findViewById(R.id.buttonLogin);
         password = findViewById(R.id.textPassword);
         fstor  = FirebaseFirestore.getInstance();
 
@@ -50,6 +51,15 @@ public class SignUp extends AppCompatActivity {
 //            startActivity(new Intent(getApplicationContext(), MainActivity.class));
 //            finish();
 //        }
+        loginButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SignUp.this, LoginActivity.class);
+                startActivity(intent);
+            }
+        });
+
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
