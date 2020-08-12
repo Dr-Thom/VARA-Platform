@@ -36,30 +36,15 @@ public class SignUp extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
 
-        fname = findViewById(R.id.textFirstName);
-        lname = findViewById(R.id.textLastName);
-        email = findViewById(R.id.textEmail);
-        phoneN = findViewById(R.id.textPhone);
-        City = findViewById(R.id.textAddress);
-        fAUTH = FirebaseAuth.getInstance();
-        signup = findViewById(R.id.buttonSignUp);
-        loginButton = (Button) findViewById(R.id.buttonLogin);
-        password = findViewById(R.id.textPassword);
-        fstor  = FirebaseFirestore.getInstance();
+        initializingVaribles();
 
-//        if (fAUTH.getCurrentUser() != null) {
-//            startActivity(new Intent(getApplicationContext(), MainActivity.class));
-//            finish();
-//        }
-        loginButton.setOnClickListener(new View.OnClickListener() {
+        navigateToLogInPage();
 
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(SignUp.this, LoginActivity.class);
-                startActivity(intent);
-            }
-        });
+        validationAndDataStoring();
 
+    }
+
+    private void validationAndDataStoring() {
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -98,37 +83,64 @@ public class SignUp extends AppCompatActivity {
                     password.setError("Password must be a minimum of 6 characters long");
                     return;
                 }
-                fAUTH.createUserWithEmailAndPassword(Email, Password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            Toast.makeText(SignUp.this, "User created", Toast.LENGTH_SHORT).show();
-
-                            userID = fAUTH.getCurrentUser().getUid();
-                            DocumentReference documentReference = fstor.collection("UserInfo").document(userID);
-                            Map<String ,Object> user = new HashMap<>();
-                            user.put("First Name", firstName);
-                            user.put("Last Name",lastName);
-                            user.put("Email", Email);
-                            user.put("Password",Password);
-                            user.put("Phone",phone);
-                            user.put("City",city);
-
-                            documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
-                                
-                                @Override
-                                public void onSuccess(Void aVoid) {
-                                    Log.d(TAG, "User is created" + userID);
-                                }
-                            });
-                            startActivity(new Intent(getApplicationContext(), MainActivity.class));
-                        } else {
-                            Toast.makeText(SignUp.this, "Error " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                });
+                storeDataInFireBsae(firstName, lastName, Email, Password, city, phone);
             }
         });
+    }
 
+    public void storeDataInFireBsae(final String firstName, final String lastName, final String email, final String password, final String city, final String phone) {
+        fAUTH.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if (task.isSuccessful()) {
+                    Toast.makeText(SignUp.this, "User created", Toast.LENGTH_SHORT).show();
+
+                    userID = fAUTH.getCurrentUser().getUid();
+                    DocumentReference documentReference = fstor.collection("UserInfo").document(userID);
+                    Map<String ,Object> user = new HashMap<>();
+                    user.put("First Name", firstName);
+                    user.put("Last Name",lastName);
+                    user.put("Email", email);
+                    user.put("Password", password);
+                    user.put("Phone",phone);
+                    user.put("City",city);
+
+                    documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
+
+                        @Override
+                        public void onSuccess(Void aVoid) {
+                            Log.d(TAG, "User is created" + userID);
+                        }
+                    });
+                    startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                } else {
+                    Toast.makeText(SignUp.this, "Error " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+    }
+
+    private void navigateToLogInPage() {
+        loginButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SignUp.this, LoginActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void initializingVaribles() {
+        fname = findViewById(R.id.textFirstName);
+        lname = findViewById(R.id.textLastName);
+        email = findViewById(R.id.textEmail);
+        phoneN = findViewById(R.id.textPhone);
+        City = findViewById(R.id.textAddress);
+        fAUTH = FirebaseAuth.getInstance();
+        signup = findViewById(R.id.buttonSignUp);
+        loginButton = (Button) findViewById(R.id.buttonLogin);
+        password = findViewById(R.id.textPassword);
+        fstor  = FirebaseFirestore.getInstance();
     }
 }
