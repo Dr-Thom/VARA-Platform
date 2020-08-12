@@ -7,8 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import java.time.Instant;
-
 public class MainActivity extends AppCompatActivity {
     Button signup;
 
@@ -16,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        signup =  findViewById(R.id.sign_up_button);
+        signup =  findViewById(R.id.buttonSignUp);
 
     }
     public void goToSignUpPage (View view){

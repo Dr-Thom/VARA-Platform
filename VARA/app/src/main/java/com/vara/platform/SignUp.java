@@ -26,7 +26,7 @@ import java.util.Map;
 public class SignUp extends AppCompatActivity {
     public static final String TAG = "TAG";
     EditText fname, email, lname, phoneN, City, password;
-    Button signup, login;
+    Button signup, loginButton;
     FirebaseAuth fAUTH;
     FirebaseFirestore fstor;
     String userID;
@@ -36,21 +36,30 @@ public class SignUp extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
 
-        fname = findViewById(R.id.Fname);
-        lname = findViewById(R.id.Lname);
-        email = findViewById(R.id.Email);
-        phoneN = findViewById(R.id.Phone);
-        City = findViewById(R.id.Address);
+        fname = findViewById(R.id.textFirstName);
+        lname = findViewById(R.id.textLastName);
+        email = findViewById(R.id.textEmail);
+        phoneN = findViewById(R.id.textPhone);
+        City = findViewById(R.id.textAddress);
         fAUTH = FirebaseAuth.getInstance();
-        signup = findViewById(R.id.singUpButton);
-        login = findViewById(R.id.loginButton);
-        password = findViewById(R.id.Password);
+        signup = findViewById(R.id.buttonSignUp);
+        loginButton = (Button) findViewById(R.id.buttonLogin);
+        password = findViewById(R.id.textPassword);
         fstor  = FirebaseFirestore.getInstance();
 
 //        if (fAUTH.getCurrentUser() != null) {
 //            startActivity(new Intent(getApplicationContext(), MainActivity.class));
 //            finish();
 //        }
+        loginButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SignUp.this, LoginActivity.class);
+                startActivity(intent);
+            }
+        });
+
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -89,7 +98,6 @@ public class SignUp extends AppCompatActivity {
                     password.setError("Password must be a minimum of 6 characters long");
                     return;
                 }
-
                 fAUTH.createUserWithEmailAndPassword(Email, Password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
@@ -122,13 +130,5 @@ public class SignUp extends AppCompatActivity {
             }
         });
 
-
     }
-
-    public void goToLoginPage(View view) {
-        Intent intent = new Intent(this, LoginActivity.class);
-        startActivity(intent);
-    }
-
-
 }
