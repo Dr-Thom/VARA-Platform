@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class UserPage extends AppCompatActivity {
 
-    TextView firstNameTV, lastNameTV, phoneTV, cityTV;
+    TextView emailTV, firstNameTV, lastNameTV, phoneTV, cityTV;
     EditText firstNameET, lastNameET, phoneET, cityET;
     ImageButton editButton, saveButton;
 
@@ -19,6 +19,7 @@ public class UserPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.user_page);
         //initializing TextViews
+        emailTV = findViewById(R.id.email_tv);
         firstNameTV = findViewById(R.id.firstName_tv);
         lastNameTV = findViewById(R.id.lastName_tv);
         phoneTV = findViewById(R.id.phone_tv);

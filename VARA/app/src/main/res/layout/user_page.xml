@@ -69,7 +69,7 @@
             android:textSize="20dp" />
 
         <TextView
-            android:id="@+id/email-tv"
+            android:id="@+id/email_tv"
             android:layout_width="match_parent"
             android:layout_height="36dp"
             android:paddingStart="6dp"
@@ -96,7 +96,7 @@
             android:textSize="20dp" />
 
         <TextView
-            android:id="@+id/firstName-tv"
+            android:id="@+id/firstName_tv"
             android:layout_width="match_parent"
             android:layout_height="36dp"
             android:inputType="textPersonName"
@@ -106,7 +106,7 @@
             tools:text="first name" />
 
         <EditText
-            android:id="@+id/firstName-et"
+            android:id="@+id/firstName_et"
             android:layout_width="match_parent"
             android:layout_height="36dp"
             android:inputType="textPersonName"
@@ -134,7 +134,7 @@
             android:textSize="20dp" />
 
         <TextView
-            android:id="@+id/lastName-tv"
+            android:id="@+id/lastName_tv"
             android:layout_width="match_parent"
             android:layout_height="36dp"
             android:inputType="textPersonName"
@@ -144,7 +144,7 @@
             tools:text="last name" />
 
         <EditText
-            android:id="@+id/lastName-et"
+            android:id="@+id/lastName_et"
             android:layout_width="match_parent"
             android:layout_height="36dp"
             android:inputType="textPersonName"
@@ -172,7 +172,7 @@
             android:textSize="20dp" />
 
         <TextView
-            android:id="@+id/phone-tv"
+            android:id="@+id/phone_tv"
             android:layout_width="match_parent"
             android:layout_height="36dp"
             android:inputType="phone"
@@ -181,8 +181,8 @@
             android:textSize="20dp"
             tools:text="###-###-####" />
 
-        <TextView
-            android:id="@+id/phone-et"
+        <EditText
+            android:id="@+id/phone_et"
             android:layout_width="match_parent"
             android:layout_height="36dp"
             android:inputType="phone"
@@ -210,7 +210,7 @@
             android:textSize="20dp" />
 
         <TextView
-            android:id="@+id/city-tv"
+            android:id="@+id/city_tv"
             android:layout_width="match_parent"
             android:layout_height="36dp"
             android:inputType="text"
@@ -219,8 +219,8 @@
             android:textSize="20dp"
             tools:text="city" />
 
-        <TextView
-            android:id="@+id/city-et"
+        <EditText
+            android:id="@+id/city_et"
             android:layout_width="match_parent"
             android:layout_height="36dp"
             android:inputType="text"
