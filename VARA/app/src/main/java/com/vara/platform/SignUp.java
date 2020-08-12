@@ -43,6 +43,7 @@ public class SignUp extends AppCompatActivity {
         City = findViewById(R.id.Address);
         fAUTH = FirebaseAuth.getInstance();
         signup = findViewById(R.id.singUpButton);
+        login = findViewById(R.id.loginButton);
         password = findViewById(R.id.Password);
         fstor  = FirebaseFirestore.getInstance();
 
@@ -88,6 +89,7 @@ public class SignUp extends AppCompatActivity {
                     password.setError("Password must be a minimum of 6 characters long");
                     return;
                 }
+
                 fAUTH.createUserWithEmailAndPassword(Email, Password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
@@ -120,5 +122,13 @@ public class SignUp extends AppCompatActivity {
             }
         });
 
+
     }
+
+    public void goToLoginPage(View view) {
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
+    }
+
+
 }

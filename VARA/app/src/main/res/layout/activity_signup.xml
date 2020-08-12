@@ -133,13 +133,15 @@
         android:layout_marginEnd="168dp"
         android:background="@color/colorPink"
         android:text="@string/log_in"
+        android:onClick="goToLoginPage"
         android:textColor="#FFF"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Address"
-        app:layout_constraintVertical_bias="0.593" />
+        app:layout_constraintVertical_bias="0.593"
+        tools:ignore="OnClick" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
