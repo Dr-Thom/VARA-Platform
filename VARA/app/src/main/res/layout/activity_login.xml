@@ -9,8 +9,8 @@
 
     <TextView
         android:id="@+id/txtLoginHeader"
-        android:layout_width="788dp"
-        android:layout_height="75dp"
+        android:layout_width="775dp"
+        android:layout_height="85dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
@@ -20,7 +20,8 @@
         android:text="@string/loginTitle"
         android:textAlignment="center"
         android:textColor="@color/colorPink"
-        android:textSize="46sp" />
+        android:textSize="64sp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/editEmailAddress"
@@ -92,8 +93,8 @@
 
     <Button
         android:id="@+id/loginButton"
-        android:layout_width="299dp"
-        android:layout_height="76dp"
+        android:layout_width="300dp"
+        android:layout_height="75dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="40dp"
@@ -101,12 +102,12 @@
         android:background="@color/colorPink"
         android:text="@string/loginButton"
         android:textColor="@color/colorWhite"
-        android:textSize="24sp" />
+        android:textSize="30sp" />
 
     <Button
         android:id="@+id/homeButton"
-        android:layout_width="299dp"
-        android:layout_height="76dp"
+        android:layout_width="300dp"
+        android:layout_height="75dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="40dp"
@@ -114,12 +115,12 @@
         android:background="@color/colorPink"
         android:text="@string/homeButton"
         android:textColor="@color/colorWhite"
-        android:textSize="24sp" />
+        android:textSize="30sp" />
 
     <Button
         android:id="@+id/signupButton"
-        android:layout_width="299dp"
-        android:layout_height="76dp"
+        android:layout_width="300dp"
+        android:layout_height="75dp"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="150dp"
         android:layout_marginEnd="150dp"
@@ -129,6 +130,6 @@
         android:background="@color/colorPink"
         android:text="@string/signUpButton"
         android:textColor="@color/colorWhite"
-        android:textSize="24sp" />
+        android:textSize="30sp" />
 
 </RelativeLayout>
