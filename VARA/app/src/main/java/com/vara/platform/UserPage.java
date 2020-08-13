@@ -7,12 +7,12 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
-
 public class UserPage extends AppCompatActivity {
 
     TextView emailTV, firstNameTV, lastNameTV, phoneTV, cityTV;
     EditText firstNameET, lastNameET, phoneET, cityET;
     ImageButton editButton, saveButton;
+    DBHelper dbHelper = new DBHelper().getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
