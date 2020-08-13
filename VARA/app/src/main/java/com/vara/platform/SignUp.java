@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import com.google.firebase.auth.FirebaseAuth;;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.vara.platform.Models.User;
 
 public class SignUp extends AppCompatActivity {
     public static final String TAG = "TAG";
@@ -16,6 +17,7 @@ public class SignUp extends AppCompatActivity {
     Button signup, loginButton;
     FirebaseAuth fAUTH;
     FirebaseFirestore fstor;
+    User user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,7 +86,10 @@ public class SignUp extends AppCompatActivity {
                     return;
                 }
 
-                DBHelper.authenticate(getApplicationContext(), firstName, lastName, Email, Password, phone, city);
+                //creating a new user object
+                user = new User(firstName, lastName, Email, Password, phone, city);
+                //creating new user in database
+                DBHelper.authenticate(getApplicationContext(), user);
             }
         });
 

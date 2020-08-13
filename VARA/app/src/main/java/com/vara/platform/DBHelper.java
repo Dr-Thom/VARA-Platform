@@ -11,10 +11,9 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
-
-import java.util.HashMap;
-import java.util.Map;
+import com.vara.platform.Models.User;
 import java.util.Objects;
+
 
 public class DBHelper {
     String TAG = "DBHelper";
@@ -24,7 +23,7 @@ public class DBHelper {
 
     private static DBHelper dbHelper;
 
-    public DBHelper() {
+    private DBHelper() {
         super();
     }
 
@@ -35,14 +34,9 @@ public class DBHelper {
         return dbHelper;
     };
 
-    protected static void authenticate(final Context context,
-                                final String firstName,
-                                final String lastName,
-                                final String email,
-                                final String password,
-                                final String phone,
-                                final String city) {
-        fAUTH.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+    //Signing up the new user and then creating the user profile in UserInfo collection on Firestore database
+    protected static void authenticate(final Context context, final User user) {
+        fAUTH.createUserWithEmailAndPassword(user.getEmail(), user.getPassword()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
 
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
@@ -52,13 +46,6 @@ public class DBHelper {
                     Toast.makeText(context, "User created", Toast.LENGTH_LONG).show();
 
                     DocumentReference documentReference = fstor.collection("UserInfo").document(userId);
-                    Map<String, Object> user = new HashMap<>();
-                    user.put("First Name", firstName);
-                    user.put("Last Name", lastName);
-                    user.put("Email", email);
-                    user.put("Password", password);
-                    user.put("Phone", phone);
-                    user.put("City", city);
 
                     documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
 
