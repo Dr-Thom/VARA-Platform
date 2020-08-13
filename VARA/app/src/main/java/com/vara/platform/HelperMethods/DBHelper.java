@@ -1,4 +1,4 @@
-package com.vara.platform;
+package com.vara.platform.HelperMethods;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,6 +11,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.vara.platform.MainActivity;
 import com.vara.platform.Models.User;
 import java.util.Objects;
 
@@ -35,7 +36,7 @@ public class DBHelper {
     };
 
     //Signing up the new user and then creating the user profile in UserInfo collection on Firestore database
-    protected static void authenticate(final Context context, final User user) {
+    public static void authenticate(final Context context, final User user) {
         fAUTH.createUserWithEmailAndPassword(user.getEmail(), user.getPassword()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
 
             @Override

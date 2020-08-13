@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import com.google.firebase.auth.FirebaseAuth;;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.vara.platform.HelperMethods.DBHelper;
 import com.vara.platform.Models.User;
 
 public class SignUp extends AppCompatActivity {
