@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="879dp"
+        android:layout_height="618dp"
+        android:text="Thank you for watching our sponsors and the important info they shared with you.
+
+ please patronize these sponsors since they are paying to keep fare costs down while giving a better income to your driver, you are entitled to special discounts for participating.  If you would like more information on these special discounts, please tap the flowing 'YES' button and we'll follow up with an email that includes your personal discounts.
+
+If you have any further questions or concerns please email us at varaplatformtest@gmail.com"
+        android:textSize="36sp"
+        tools:layout_editor_absoluteX="201dp"
+        tools:layout_editor_absoluteY="103dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
