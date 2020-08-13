@@ -18,9 +18,9 @@ import java.util.Objects;
 
 public class DBHelper {
     String TAG = "DBHelper";
-    FirebaseAuth fAUTH = FirebaseAuth.getInstance();
-    FirebaseFirestore fstor = FirebaseFirestore.getInstance();
-    String userId;
+    static FirebaseAuth fAUTH = FirebaseAuth.getInstance();
+    static FirebaseFirestore fstor = FirebaseFirestore.getInstance();
+    static String userId;
 
     private static DBHelper dbHelper;
 
@@ -35,7 +35,7 @@ public class DBHelper {
         return dbHelper;
     };
 
-    protected void authenticate(final Context context,
+    protected static void authenticate(final Context context,
                                 final String firstName,
                                 final String lastName,
                                 final String email,

@@ -84,8 +84,7 @@ public class SignUp extends AppCompatActivity {
                     return;
                 }
 
-                DBHelper dbHelper = new DBHelper().getInstance();
-                dbHelper.authenticate(getApplicationContext(), firstName, lastName, Email, Password, phone, city);
+                DBHelper.authenticate(getApplicationContext(), firstName, lastName, Email, Password, phone, city);
             }
         });
 
