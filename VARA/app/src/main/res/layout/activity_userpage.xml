@@ -30,7 +30,7 @@
             android:text="@string/user_information"
             android:textAlignment="gravity"
             android:textColor="@color/colorPink"
-            android:textSize="24dp" />
+            android:textSize="36sp" />
 
         <View
             android:layout_width="0dp"
@@ -76,12 +76,12 @@
 
         <TextView
             android:id="@+id/em"
-            android:layout_width="104dp"
+            android:layout_width="204dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
             android:text="@string/label_email"
             android:textColor="@color/colorPink"
-            android:textSize="20dp" />
+            android:textSize="28sp" />
 
         <TextView
             android:id="@+id/email_tv"
@@ -89,9 +89,9 @@
             android:layout_height="48dp"
             android:gravity="center_vertical"
             android:paddingStart="6dp"
-            android:text="mail@email.com"
+            tools:text="mail@email.com"
             android:textColor="@color/colorAccent"
-            android:textSize="20dp"
+            android:textSize="28sp"
             android:visibility="visible" />
 
     </LinearLayout>
@@ -105,22 +105,21 @@
 
         <TextView
             android:id="@+id/fn"
-            android:layout_width="104dp"
+            android:layout_width="204dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
             android:text="@string/fname"
             android:textColor="@color/colorPink"
-            android:textSize="20dp" />
+            android:textSize="28sp" />
 
         <TextView
             android:id="@+id/firstName_tv"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:gravity="center_vertical"
-            android:inputType="textPersonName"
             android:paddingStart="6dp"
             android:textColor="@color/colorAccent"
-            android:textSize="20dp"
+            android:textSize="28sp"
             android:visibility="visible"
             tools:text="first name" />
 
@@ -131,7 +130,7 @@
             android:inputType="textPersonName"
             android:paddingStart="6dp"
             android:textColor="#F2F2F2"
-            android:textSize="20dp"
+            android:textSize="28sp"
             android:visibility="gone"
             tools:text="first name" />
     </LinearLayout>
@@ -145,22 +144,21 @@
 
         <TextView
             android:id="@+id/ln"
-            android:layout_width="104dp"
+            android:layout_width="204dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
             android:text="@string/lname"
             android:textColor="@color/colorPink"
-            android:textSize="20dp" />
+            android:textSize="28sp" />
 
         <TextView
             android:id="@+id/lastName_tv"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:gravity="center_vertical"
-            android:inputType="textPersonName"
             android:paddingStart="6dp"
             android:textColor="@color/colorAccent"
-            android:textSize="20dp"
+            android:textSize="28sp"
             android:visibility="visible"
             tools:text="last name" />
 
@@ -171,7 +169,7 @@
             android:inputType="textPersonName"
             android:paddingStart="6dp"
             android:textColor="#F2F2F2"
-            android:textSize="20dp"
+            android:textSize="28sp"
             android:visibility="gone"
             tools:text="last name" />
     </LinearLayout>
@@ -185,22 +183,21 @@
 
         <TextView
             android:id="@+id/p"
-            android:layout_width="104dp"
+            android:layout_width="204dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
             android:text="@string/phone"
             android:textColor="@color/colorPink"
-            android:textSize="20dp" />
+            android:textSize="28sp" />
 
         <TextView
             android:id="@+id/phone_tv"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:gravity="center_vertical"
-            android:inputType="phone"
             android:paddingStart="6dp"
             android:textColor="@color/colorAccent"
-            android:textSize="20dp"
+            android:textSize="28sp"
             android:visibility="visible"
             tools:text="###-###-####" />
 
@@ -211,7 +208,7 @@
             android:inputType="phone"
             android:paddingStart="6dp"
             android:textColor="#F2F2F2"
-            android:textSize="20dp"
+            android:textSize="28sp"
             android:visibility="gone"
             tools:text="###-###-####" />
     </LinearLayout>
@@ -225,22 +222,21 @@
 
         <TextView
             android:id="@+id/c"
-            android:layout_width="104dp"
+            android:layout_width="204dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
             android:text="@string/city"
             android:textColor="@color/colorPink"
-            android:textSize="20dp" />
+            android:textSize="28sp" />
 
         <TextView
             android:id="@+id/city_tv"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:gravity="center_vertical"
-            android:inputType="text"
             android:paddingStart="6dp"
             android:textColor="@color/colorAccent"
-            android:textSize="20dp"
+            android:textSize="28sp"
             android:visibility="visible"
             tools:text="city" />
 
@@ -251,7 +247,7 @@
             android:inputType="text"
             android:paddingStart="6dp"
             android:textColor="#F2F2F2"
-            android:textSize="20dp"
+            android:textSize="28sp"
             android:visibility="gone"
             tools:text="city" />
     </LinearLayout>
