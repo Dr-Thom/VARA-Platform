@@ -3,27 +3,20 @@
     <string name="moto">Your Vehicle, Your Money</string>
     <string name="logo">logo</string>
 
-    <string name="loginEmail">Email</string>
-    <string name="email">Email</string>
-
-    <string name="loginPassword">Password</string>
-    <string name="password">Password</string>
-
-    <string name="loginButton">Log-In</string>
-    <string name="loginTitle">Log-In</string>
-    <string name="log_in">Log-In</string>
-
-    <string name="signUpButton">Sign-Up</string>
-    <string name="sign_up">Sign-Up</string>
-
-    <string name="homeButton">Home</string>
-    <string name="continueButton">Continue</string>
+    <string name="label_email">Email</string>
+    <string name="label_password">Password</string>
+    <string name="label_login">Log-In</string>
+    <string name="label_sign_up">Sign-Up</string>
+    <string name="label_home">Home</string>
+    <string name="label_continue">Continue</string>
 
     <string name="fname">First Name</string>
     <string name="lname">Last Name</string>
     <string name="phone">Phone Number</string>
     <string name="city">City</string>
 
+    <string name="user_information">User Information</string>
 
+    <string name="nativeas_ad_unit_id" translatable="false">ca-app-pub-3228504719032164/3318486888</string>
 
 </resources>
