@@ -11,10 +11,9 @@
 
     <string name="loginButton">Log-In</string>
     <string name="loginTitle">Log-In</string>
-    <string name="log_in">Log-In</string>
+
 
     <string name="signUpButton">Sign-Up</string>
-    <string name="sign_up">Sign-Up</string>
 
     <string name="homeButton">Home</string>
     <string name="continueButton">Continue</string>

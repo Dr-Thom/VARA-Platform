@@ -63,12 +63,6 @@ public class DBHelper {
 
                     docRef = fstor.collection("UserInfo").document(userId);
 
-                    HashMap<String, String> userToAdd = new HashMap<>();
-                    userToAdd.put("firstName", user.getFirstName());
-                    userToAdd.put("lastName", user.getLastName());
-                    userToAdd.put("phone", user.getPhone());
-                    userToAdd.put("city", user.getCity());
-                    userToAdd.put("email", user.getEmail());
                     docRef.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
 
                         @Override
