@@ -61,12 +61,12 @@
 
     <Button
         android:id="@+id/okButton"
-        android:layout_width="256dp"
-        android:layout_height="128dp"
+        android:layout_width="250dp"
+        android:layout_height="75dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="75dp"
-        android:background="@color/colorPink"
+        android:background="@drawable/custom_rounded_corners"
         android:text="@string/label_continue"
         android:textAlignment="center"
         android:textColor="@color/colorWhite"
