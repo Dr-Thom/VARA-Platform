@@ -27,7 +27,7 @@
             android:layout_width="wrap_content"
             android:layout_height="48dp"
             android:layout_gravity="center_vertical"
-            android:text="User Information"
+            android:text="@string/user_information"
             android:textAlignment="gravity"
             android:textColor="@color/colorPink"
             android:textSize="24dp" />
@@ -79,7 +79,7 @@
             android:layout_width="104dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
-            android:text="@string/email"
+            android:text="@string/label_email"
             android:textColor="@color/colorPink"
             android:textSize="20dp" />
 
@@ -108,9 +108,9 @@
             android:layout_width="104dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
-            android:text="First Name"
+            android:text="@string/fname"
             android:textColor="@color/colorPink"
-            android:textSize="20dp"/>
+            android:textSize="20dp" />
 
         <TextView
             android:id="@+id/firstName_tv"
@@ -148,7 +148,7 @@
             android:layout_width="104dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
-            android:text="Last Name"
+            android:text="@string/lname"
             android:textColor="@color/colorPink"
             android:textSize="20dp" />
 
@@ -188,7 +188,7 @@
             android:layout_width="104dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
-            android:text="Phone"
+            android:text="@string/phone"
             android:textColor="@color/colorPink"
             android:textSize="20dp" />
 
@@ -228,7 +228,7 @@
             android:layout_width="104dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
-            android:text="City"
+            android:text="@string/city"
             android:textColor="@color/colorPink"
             android:textSize="20dp" />
 
