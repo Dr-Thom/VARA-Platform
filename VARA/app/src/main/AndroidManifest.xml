@@ -12,6 +12,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".SignUp"></activity>
         <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".UserPage"></activity>
         <activity android:name=".LogoActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
