@@ -12,7 +12,7 @@
         android:layout_height="100dp"
         android:background="@color/colorPink"
         android:onClick="goToSignUpPage"
-        android:text="@string/sign_up"
+        android:text="@string/label_sign_up"
         android:textColor="#FFFFFF"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
