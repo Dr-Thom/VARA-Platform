@@ -35,7 +35,6 @@ public class LogoActivity extends AppCompatActivity {
         window.setStatusBarColor(ContextCompat.getColor(LogoActivity.this,R.color.colorPink));
 //        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
 //                WindowManager.LayoutParams.FLAG_FULLSCREEN); //enable full screen
-        okbutton = (Button) findViewById(R.id.okButton);
         signOffButton = (Button) findViewById(R.id.signOffButton);
         adminButton = (Button) findViewById(R.id.adminButton);
         //homeButton = (Button) findViewById(R.id.homeButton);
