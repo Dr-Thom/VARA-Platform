@@ -1,4 +1,2 @@
 
-VARA/nativetemplates/build/*
-*.bin
-*.dex
+/*/VARA/nativetemplates/build/
