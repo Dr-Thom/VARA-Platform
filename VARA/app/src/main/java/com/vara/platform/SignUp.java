@@ -107,12 +107,12 @@ public class SignUp extends AppCompatActivity {
                             userID = fAUTH.getCurrentUser().getUid();
                             DocumentReference documentReference = fstor.collection("UserInfo").document(userID);
                             Map<String ,Object> user = new HashMap<>();
-                            user.put("First Name", firstName);
-                            user.put("Last Name",lastName);
-                            user.put("Email", Email);
-                            user.put("Password",Password);
-                            user.put("Phone",phone);
-                            user.put("City",city);
+                            user.put("firstName", firstName);
+                            user.put("lastName",lastName);
+                            user.put("email", Email);
+                            user.put("password",Password);
+                            user.put("phone",phone);
+                            user.put("city",city);
 
                             documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                                 
