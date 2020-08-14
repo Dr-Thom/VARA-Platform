@@ -60,22 +60,6 @@
         android:typeface="normal" />
 
     <Button
-        android:id="@+id/okButton"
-        android:layout_width="110dp"
-        android:layout_height="96dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="62dp"
-        android:layout_marginBottom="123dp"
-        android:background="@color/colorPink"
-        android:text="@string/label_continue"
-        android:textAlignment="center"
-        android:textColor="@color/colorWhite"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:visibility="gone"/>
-
-    <Button
         android:id="@+id/signOffButton"
         android:layout_width="300dp"
         android:layout_height="96dp"
