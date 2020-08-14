@@ -1,21 +1,38 @@
 package com.vara.platform;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
+
+import com.vara.platform.HelperMethods.ConfigClass;
 
 public class LogoActivity extends AppCompatActivity {
 
     Button okbutton, signOffButton, adminButton;
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_logo);
+
+
 //        requestWindowFeature(Window.FEATURE_NO_TITLE); //will hide the title
         getSupportActionBar().hide(); // hide the title bar
+        Window window = LogoActivity.this.getWindow();
+//// clear FLAG_TRANSLUCENT_STATUS flag:
+        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+//// add FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS flag to the window
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+// finally change the color
+        window.setStatusBarColor(ContextCompat.getColor(LogoActivity.this,R.color.colorPink));
 //        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
 //                WindowManager.LayoutParams.FLAG_FULLSCREEN); //enable full screen
         okbutton = (Button) findViewById(R.id.okButton);

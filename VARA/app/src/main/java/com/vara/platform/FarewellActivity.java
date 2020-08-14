@@ -1,4 +1,6 @@
 package com.vara.platform;
 
-public class FarewellActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class FarewellActivity  extends AppCompatActivity {
 }

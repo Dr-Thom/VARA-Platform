@@ -1,14 +1,19 @@
 package com.vara.platform;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -19,6 +24,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.vara.platform.HelperMethods.ConfigClass;
 
 public class LoginActivity extends AppCompatActivity {
     Button homeButton, loginButton, signUpButton;
@@ -27,11 +33,24 @@ public class LoginActivity extends AppCompatActivity {
     FirebaseFirestore fstor;
     AlertDialog dialog;
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+//        ConfigClass config = new ConfigClass(LogoActivity.this);
+//        config.setStatusBar();
+
         getSupportActionBar().hide(); // hide the title bar
+        Window window = LoginActivity.this.getWindow();
+//// clear FLAG_TRANSLUCENT_STATUS flag:
+        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+//// add FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS flag to the window
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+// finally change the color
+        window.setStatusBarColor(ContextCompat.getColor(LoginActivity.this,R.color.colorPink));
+
 
         mAuth = FirebaseAuth.getInstance();
         fstor  = FirebaseFirestore.getInstance();
