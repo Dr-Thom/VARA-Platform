@@ -1,6 +1,5 @@
 package com.vara.platform;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -12,46 +11,40 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.auth.FirebaseAuth;;
 import com.google.firebase.firestore.FirebaseFirestore;
-
-import java.util.HashMap;
-import java.util.Map;
+import com.vara.platform.HelperMethods.DBHelper;
+import com.vara.platform.Models.User;
 
 public class SignUp extends AppCompatActivity {
     public static final String TAG = "TAG";
-    EditText fname, email, lname, phoneN, City, password;
-    Button signup, loginButton;
+    EditText fname, email, lname, phoneN, city, password;
+    Button signUpButton, logInButton;
     FirebaseAuth fAUTH;
     FirebaseFirestore fstor;
-    String userID;
+    User user;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
-
         fname = findViewById(R.id.textFirstName);
         lname = findViewById(R.id.textLastName);
         email = findViewById(R.id.textEmail);
         phoneN = findViewById(R.id.textPhone);
-        City = findViewById(R.id.textAddress);
+        city = findViewById(R.id.textAddress);
         fAUTH = FirebaseAuth.getInstance();
-        signup = findViewById(R.id.buttonSignUp);
-        loginButton = (Button) findViewById(R.id.buttonLogin);
+        signUpButton = findViewById(R.id.buttonSignUp);
+        logInButton = findViewById(R.id.buttonLogin);
         password = findViewById(R.id.textPassword);
-        fstor  = FirebaseFirestore.getInstance();
+        fstor = FirebaseFirestore.getInstance();
 
 //        if (fAUTH.getCurrentUser() != null) {
 //            startActivity(new Intent(getApplicationContext(), MainActivity.class));
 //            finish();
 //        }
-        loginButton.setOnClickListener(new View.OnClickListener() {
+        logInButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
@@ -60,14 +53,14 @@ public class SignUp extends AppCompatActivity {
             }
         });
 
-        signup.setOnClickListener(new View.OnClickListener() {
+        signUpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 final String firstName = fname.getText().toString();
                 final String lastName = lname.getText().toString();
                 final String Email = email.getText().toString().trim();
                 final String Password = password.getText().toString().trim();
-                final String city = City.getText().toString();
+                final String city = SignUp.this.city.getText().toString();
                 final String phone = phoneN.getText().toString();
 
                 if (TextUtils.isEmpty(Email)) {
@@ -83,7 +76,7 @@ public class SignUp extends AppCompatActivity {
                     return;
                 }
                 if (TextUtils.isEmpty(city)) {
-                    City.setError("City Name is Required");
+                    SignUp.this.city.setError("City Name is Required");
                     return;
                 }
                 if (TextUtils.isEmpty(phone)) {
@@ -98,37 +91,16 @@ public class SignUp extends AppCompatActivity {
                     password.setError("Password must be a minimum of 6 characters long");
                     return;
                 }
-                fAUTH.createUserWithEmailAndPassword(Email, Password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            Toast.makeText(SignUp.this, "User created", Toast.LENGTH_SHORT).show();
-
-                            userID = fAUTH.getCurrentUser().getUid();
-                            DocumentReference documentReference = fstor.collection("UserInfo").document(userID);
-                            Map<String ,Object> user = new HashMap<>();
-                            user.put("First Name", firstName);
-                            user.put("Last Name",lastName);
-                            user.put("Email", Email);
-                            user.put("Password",Password);
-                            user.put("Phone",phone);
-                            user.put("City",city);
-
-                            documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
-                                
-                                @Override
-                                public void onSuccess(Void aVoid) {
-                                    Log.d(TAG, "User is created" + userID);
-                                }
-                            });
-                            startActivity(new Intent(getApplicationContext(), MainActivity.class));
-                        } else {
-                            Toast.makeText(SignUp.this, "Error " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                });
+                //creating a new user object based on the user inputs
+                user = new User(firstName, lastName, phone, city, Email);
+                onUserSignUp(user, Password);
             }
         });
 
+    }
+
+    private void onUserSignUp(User user, String password) {
+        //creating new user in database
+        DBHelper.authenticate(getApplicationContext(), user, password);
     }
 }
