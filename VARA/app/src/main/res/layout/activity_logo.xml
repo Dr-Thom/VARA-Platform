@@ -60,15 +60,15 @@
         android:typeface="normal" />
 
     <Button
-        android:id="@+id/signOffButton"
-        android:layout_width="300dp"
-        android:layout_height="96dp"
-        android:layout_alignParentStart="true"
+        android:id="@+id/okButton"
+        android:layout_width="250dp"
+        android:layout_height="75dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="140dp"
-        android:layout_marginBottom="128dp"
-        android:background="@color/colorPink"
-        android:text="sign off"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="75dp"
+        android:background="@drawable/custom_rounded_corners"
+        android:text="@string/label_continue"
+        android:textAlignment="center"
         android:textColor="@color/colorWhite"
         android:textSize="30sp" />
 
