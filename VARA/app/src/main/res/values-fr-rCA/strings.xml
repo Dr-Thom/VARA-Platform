@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">VARA</string>
-    <string name="loginButton" translatable="false">Loogon</string>
-    <string name="signUpButton">segn oop</string>
+    <string name="app_name">Platform VARA</string>
+    <string name="moto">Your Vehicle, Your Money</string>
+    <string name="logo">logo</string>
+
+    <string name="label_email">courielle</string>
+    <string name="label_password">mot de pass</string>
+    <string name="label_login">Log-In FR</string>
+    <string name="label_sign_up">Sign-Up FR</string>
+    <string name="label_home">Maison</string>
+    <string name="label_continue">Continue</string>
+
+    <string name="fname">Prenom</string>
+    <string name="lname">Nom de famille</string>
+    <string name="phone">Numero de telephone</string>
+    <string name="city">Ville</string>
+
+    <string name="user_information">Information de ???</string>
+
 </resources>
