@@ -18,5 +18,6 @@
     <string name="user_information">User Information</string>
 
     <string name="nativeas_ad_unit_id" translatable="false">ca-app-pub-3228504719032164/3318486888</string>
+    <string name="label_SignOff" translatable="false">Sign Off</string>
 
 </resources>
