@@ -17,7 +17,6 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.vara.platform.MainActivity;
 import com.vara.platform.Models.User;
-import java.util.HashMap;
 import java.util.Objects;
 
 
@@ -63,14 +62,7 @@ public class DBHelper {
 
                     docRef = fstor.collection("UserInfo").document(userId);
 
-                    HashMap<String, String> userToAdd = new HashMap<>();
-                    userToAdd.put("firstName", user.getFirstName());
-                    userToAdd.put("lastName", user.getLastName());
-                    userToAdd.put("phone", user.getPhone());
-                    userToAdd.put("city", user.getCity());
-                    userToAdd.put("email", user.getEmail());
                     docRef.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
-
                         @Override
                         public void onSuccess(Void aVoid) {
                             Intent intent = new Intent(context, MainActivity.class);
@@ -93,18 +85,12 @@ public class DBHelper {
                 if (documentSnapshot.exists()) {
                     user = documentSnapshot.toObject(User.class);
                     update.updateUI();
-                } else {
-
-                }
-
+                } else {}
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
-            public void onFailure(@NonNull Exception e) {
-
-            }
+            public void onFailure(@NonNull Exception e) {}
         });
-
     }
 
     public static void updateUserProfile(final User user) {
