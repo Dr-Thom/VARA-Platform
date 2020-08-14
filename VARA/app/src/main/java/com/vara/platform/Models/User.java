@@ -1,19 +1,49 @@
 package com.vara.platform.Models;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
+
 public class User {
     private String firstName;
     private String lastName;
-    private String email;
-    private String password;
     private String phone;
     private String city;
+    private String email;
 
-    public User(String firstName, String lastName, String email, String password, String phone, String city) {
+    public User() {};
+
+    public User(String firstName, String lastName, String phone, String city, String email) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.email = email;
-        this.password = password;
         this.phone = phone;
+        this.city = city;
+        this.email = email;
+    }
+
+    public ArrayList<String> userInfoArray() {
+        ArrayList<String> infoArray = new ArrayList<>(Arrays.asList(this.firstName, this.lastName, this.phone, this.city, this.email));
+        return infoArray;
+    }
+
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public void setCity(String city) {
         this.city = city;
     }
 
@@ -27,10 +57,6 @@ public class User {
 
     public String getEmail() {
         return email;
-    }
-
-    public String getPassword() {
-        return password;
     }
 
     public String getPhone() {
