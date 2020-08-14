@@ -1,7 +1,6 @@
 package com.vara.platform.Models;
 
 import android.view.View;
-
 import java.util.ArrayList;
 
 public class ViewArray {
