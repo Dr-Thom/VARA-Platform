@@ -6,9 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
-
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -22,7 +20,6 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.vara.platform.LogoActivity;
 import com.vara.platform.MainActivity;
 import com.vara.platform.Models.User;
-
 import java.util.Objects;
 
 
@@ -78,7 +75,6 @@ public class DBHelper {
 
     public static void getUserProfile(final Update update) {
         Log.w(TAG, "user Id is " + userId);
-        docRef = fstor.collection("UserInfo").document(userId);
         docRef.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
             public void onSuccess(DocumentSnapshot documentSnapshot) {

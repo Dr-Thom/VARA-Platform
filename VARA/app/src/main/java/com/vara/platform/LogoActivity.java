@@ -58,7 +58,6 @@ public class LogoActivity extends AppCompatActivity {
                 startActivity(intent);
                 //setContentView(R.layout.loginpage);
                 //Toast.makeText(MainActivity.this, "You clicked on ImageView", Toast.LENGTH_LONG).show();
-
             }
         });
 
