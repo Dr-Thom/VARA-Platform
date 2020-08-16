@@ -13,6 +13,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 
 import com.vara.platform.HelperMethods.ConfigClass;
+import com.vara.platform.HelperMethods.DBHelper;
 
 public class LogoActivity extends AppCompatActivity {
 
@@ -41,12 +42,11 @@ public class LogoActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
+                DBHelper.signOut();
                 Intent intent = new Intent(LogoActivity.this, LoginActivity.class);
-
                 startActivity(intent);
                 //setContentView(R.layout.loginpage);
                 //Toast.makeText(MainActivity.this, "You clicked on ImageView", Toast.LENGTH_LONG).show();
-
             }
         });
 

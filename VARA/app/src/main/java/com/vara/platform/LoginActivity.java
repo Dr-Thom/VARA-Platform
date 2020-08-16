@@ -25,6 +25,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.vara.platform.HelperMethods.ConfigClass;
+import com.vara.platform.HelperMethods.DBHelper;
 
 public class LoginActivity extends AppCompatActivity {
     Button homeButton, loginButton, signUpButton;
@@ -71,7 +72,6 @@ public class LoginActivity extends AppCompatActivity {
                 Intent intent = new Intent(LoginActivity.this, LogoActivity.class);
                 startActivity(intent);
                 //Toast.makeText(MainActivity.this, "You clicked on ImageView", Toast.LENGTH_LONG).show();
-
             }
         });
 
@@ -104,49 +104,7 @@ public class LoginActivity extends AppCompatActivity {
             Toast.makeText(LoginActivity.this, "Please enter email and password", Toast.LENGTH_LONG).show();
             return;
         }
-        mAuth.signInWithEmailAndPassword(email, password)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    private static final String TAG = "TAG" ;
 
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            // Sign in success, update UI with the signed-in user's information
-                            Log.d(TAG, "signInWithEmail:success");
-                            FirebaseUser user = mAuth.getCurrentUser();
-                            //updateUI(user);
-//                            Toast.makeText(LoginActivity.this, "Sign-In Success", Toast.LENGTH_LONG).show();
-                            show("Sign In","Success");
-                            
-                            Intent intent = new Intent(LoginActivity.this, LogoActivity.class);
-                            startActivity(intent);
-                        } else {
-                            // If sign in fails, display a message to the user.
-                            Log.w(TAG, "signInWithEmail:failure", task.getException());
-//                            Toast.makeText(LoginActivity.this, "Authentication failed.",
-//                                    Toast.LENGTH_SHORT).show();
-                            show("Sign In","Failed");
-                            //updateUI(null);
-                        }
-
-                        // ...
-                    }
-                });
-//
-    }
-    void show(String title, String message)
-    {
-        dialog = new AlertDialog.Builder(LoginActivity.this) // Pass a reference to your main activity here
-                .setTitle(title)
-                .setMessage(message)
-                .setPositiveButton("OK", new DialogInterface.OnClickListener()
-                {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i)
-                    {
-                        dialog.cancel();
-                    }
-                })
-                .show();
+        DBHelper.signIn(this, email, password);
     }
 }
