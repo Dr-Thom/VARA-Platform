@@ -13,15 +13,11 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.firestore.FirebaseFirestore;
 import com.vara.platform.HelperMethods.DBHelper;
 
 public class LoginActivity extends AppCompatActivity {
     Button homeButton, loginButton, signUpButton;
     TextView editEmailAddress, editPassword;
-    FirebaseAuth mAuth;
-    FirebaseFirestore fstor;
     AlertDialog dialog;
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
@@ -41,10 +37,6 @@ public class LoginActivity extends AppCompatActivity {
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
 // finally change the color
         window.setStatusBarColor(ContextCompat.getColor(LoginActivity.this,R.color.colorPink));
-
-
-        mAuth = FirebaseAuth.getInstance();
-        fstor  = FirebaseFirestore.getInstance();
 
         homeButton = (Button) findViewById(R.id.homeButton);
         loginButton = (Button) findViewById(R.id.loginButton);
