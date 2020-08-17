@@ -1,10 +1,13 @@
 package com.vara.platform;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 import com.vara.platform.HelperMethods.DBHelper;
 import com.vara.platform.Models.User;
@@ -104,7 +107,7 @@ public class UserPage extends AppCompatActivity {
                 }
             }
         };
-        DBHelper.getUserProfile(update);
+        DBHelper.getUserProfile(update, this);
     }
 
     public void populateUserEditText() {
@@ -119,7 +122,17 @@ public class UserPage extends AppCompatActivity {
                 }
             }
         };
-        DBHelper.getUserProfile(update);
+        DBHelper.getUserProfile(update, this);
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (DBHelper.getUser() != null) {
+            super.onBackPressed();
+        } else {
+            Intent intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
+        }
     }
 
 }
