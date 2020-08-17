@@ -14,8 +14,11 @@ import android.widget.Button;
 
 import com.vara.platform.HelperMethods.ConfigClass;
 
-public class LogoActivity extends AppCompatActivity {
+import java.util.Timer;
+import java.util.TimerTask;
 
+public class LogoActivity extends AppCompatActivity {
+    Timer timer;
     Button signOffButton, adminButton;
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
@@ -71,5 +74,15 @@ public class LogoActivity extends AppCompatActivity {
 
             }
         });*/
+
+        timer= new Timer();
+        timer.schedule(new TimerTask(){
+            @Override
+            public void run(){
+                Intent intent = new Intent(LogoActivity.this, WelcomeMsg.class);
+                startActivity(intent);
+                finish();
+            }
+        }, 2000);
     }
 }
