@@ -107,4 +107,13 @@ public class LoginActivity extends AppCompatActivity {
 
         DBHelper.signIn(this, email, password);
     }
+
+    @Override
+    public void onBackPressed() {
+        if (DBHelper.getUser() != null) {
+            super.onBackPressed();
+        } else {
+            moveTaskToBack(true);
+        }
+    }
 }
