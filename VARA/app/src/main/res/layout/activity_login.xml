@@ -93,16 +93,13 @@
 
     <Button
         android:id="@+id/loginButton"
-        android:layout_width="@dimen/buttonWidth"
-        android:layout_height="@dimen/buttonHeight"
+        style="@style/VaraTheme"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="40dp"
         android:layout_marginBottom="85dp"
         android:background="@drawable/custom_rounded_corners"
-        android:text="@string/label_login"
-        android:textColor="@color/colorWhite"
-        android:textSize="@dimen/buttonTextSize" />
+        android:text="@string/label_login" />
 
     <Button
         android:id="@+id/homeButton"
@@ -120,8 +117,7 @@
 
     <Button
         android:id="@+id/signupButton"
-        android:layout_width="@dimen/buttonWidth"
-        android:layout_height="@dimen/buttonHeight"
+        style="@style/VaraTheme"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="150dp"
         android:layout_marginEnd="150dp"
@@ -129,8 +125,6 @@
         android:layout_toStartOf="@+id/loginButton"
         android:layout_toEndOf="@+id/homeButton"
         android:background="@drawable/custom_rounded_corners"
-        android:text="@string/label_sign_up"
-        android:textColor="@color/colorWhite"
-        android:textSize="@dimen/buttonTextSize" />
+        android:text="@string/label_sign_up" />
 
 </RelativeLayout>

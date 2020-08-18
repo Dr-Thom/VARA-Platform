@@ -118,14 +118,11 @@
 
     <Button
         android:id="@+id/buttonSignUp"
-        android:layout_width="190dp"
-        android:layout_height="64dp"
+        style="@style/VaraTheme"
         android:layout_marginEnd="16dp"
         android:background="@drawable/custom_rounded_corners"
         android:text="@string/label_sign_up"
         android:textColor="#FFF"
-        android:textSize="30sp"
-        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/buttonLogin"
         app:layout_constraintHorizontal_bias="0.706"
@@ -135,19 +132,15 @@
 
     <Button
         android:id="@+id/buttonLogin"
-        android:layout_width="190dp"
-        android:layout_height="64dp"
-        android:layout_marginEnd="384dp"
+        style="@style/VaraTheme"
+        android:layout_marginEnd="84dp"
         android:background="@drawable/custom_rounded_corners"
         android:text="@string/label_login"
         android:textAlignment="center"
-        android:textColor="#FFF"
-        android:textSize="30sp"
-        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textAddress"
-        app:layout_constraintVertical_bias="0.586" />
+        app:layout_constraintVertical_bias="0.589" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

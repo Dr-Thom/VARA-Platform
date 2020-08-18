@@ -61,31 +61,23 @@
 
     <Button
         android:id="@+id/signOffButton"
-        android:layout_width="@dimen/buttonWidth"
-        android:layout_height="@dimen/buttonHeight"
+        style="@style/VaraTheme"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="140dp"
         android:layout_marginBottom="128dp"
         android:background="@drawable/custom_rounded_corners"
         android:text="@string/label_SignOff"
-        android:textAlignment="center"
-        android:textColor="@color/colorWhite"
-        android:textSize="@dimen/buttonTextSize"
-        android:textStyle="bold" />
+        android:textAlignment="center" />
 
     <Button
         android:id="@+id/adminButton"
-        android:layout_width="@dimen/buttonWidth"
-        android:layout_height="@dimen/buttonHeight"
+        style="@style/VaraTheme"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="140dp"
         android:layout_marginBottom="128dp"
         android:background="@drawable/custom_rounded_corners"
-        android:text="admin"
-        android:textColor="@color/colorWhite"
-        android:textSize="@dimen/buttonTextSize"
-        android:textStyle="bold" />
+        android:text="@string/label_admin" />
 
 </RelativeLayout>
