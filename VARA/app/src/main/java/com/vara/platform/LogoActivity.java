@@ -47,6 +47,7 @@ public class LogoActivity extends AppCompatActivity {
                 DBHelper.signOut();
                 Intent intent = new Intent(LogoActivity.this, LoginActivity.class);
                 startActivity(intent);
+                timer.cancel();
                 //setContentView(R.layout.loginpage);
                 //Toast.makeText(MainActivity.this, "You clicked on ImageView", Toast.LENGTH_LONG).show();
             }
@@ -58,6 +59,7 @@ public class LogoActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(LogoActivity.this, MainActivity.class);
                 startActivity(intent);
+                timer.cancel();
                 //setContentView(R.layout.loginpage);
                 //Toast.makeText(MainActivity.this, "You clicked on ImageView", Toast.LENGTH_LONG).show();
             }
@@ -82,7 +84,7 @@ public class LogoActivity extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }
-        }, 10000);
+        }, 15000);
     }
 
     @Override
