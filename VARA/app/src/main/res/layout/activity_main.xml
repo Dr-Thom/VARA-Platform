@@ -15,22 +15,41 @@
         android:text="@string/label_sign_up"
         android:textColor="#FFFFFF"
         android:textSize="36sp"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintCircleRadius="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="OnClick" />
+
     <Button
         android:id="@+id/userInfo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPink"
+        android:layout_width="@dimen/buttonWidth"
+        android:layout_height="@dimen/buttonHeight"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/custom_rounded_corners"
         android:onClick="gotoUserInfo"
         android:text="Account"
-        android:textColor="#FFFFFF"
-        android:textSize="36sp"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/buttonTextSize"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="OnClick" />
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="@dimen/buttonWidth"
+        android:layout_height="@dimen/buttonHeight"
+        android:layout_marginStart="72dp"
+        android:background="@drawable/custom_rounded_corners"
+        android:text="@string/label_back"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/buttonTextSize"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/userInfo"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
