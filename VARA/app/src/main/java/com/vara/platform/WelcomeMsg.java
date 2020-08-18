@@ -29,7 +29,7 @@ public class WelcomeMsg extends AppCompatActivity {
                     startActivity(intent);
                     finish();
                 }
-            }, 2500);
+            }, 30000);
         //} else { return; }
     }
 }
