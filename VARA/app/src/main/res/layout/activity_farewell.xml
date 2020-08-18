@@ -1,21 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/colorBlack"
+    android:orientation="vertical">
 
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="879dp"
-        android:layout_height="618dp"
-        android:text="Thank you for watching our sponsors and the important info they shared with you.
+        android:layout_width="1136dp"
+        android:layout_height="422dp"
+        android:ems="50"
+        android:text="Thank you for watching our sponsors and the important info they shared with you.  please patronize these sponsors since they are paying to keep fare costs down while giving a better income to your driver, you are entitled to special discounts for participating.If you would like more information on these special discounts, please tap the flowing 'YES' button and we'll follow up with an email that includes your personal discounts."
+        android:textColor="@color/colorAccent"
+        android:textColorHint="@color/colorAccent"
+        android:textSize="42sp"
+        tools:layout_editor_absoluteX="64dp"
+        tools:layout_editor_absoluteY="33dp" />
 
- please patronize these sponsors since they are paying to keep fare costs down while giving a better income to your driver, you are entitled to special discounts for participating.  If you would like more information on these special discounts, please tap the flowing 'YES' button and we'll follow up with an email that includes your personal discounts.
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="701dp"
+        android:layout_height="128dp"
+        android:text="If you have any further questions or concerns please email us at varaplatformtest@gmail.com"
+        android:textColor="@color/colorAccent"
+        android:textColorHint="@color/colorAccent"
+        android:textSize="32sp"
+        tools:layout_editor_absoluteX="290dp"
+        tools:layout_editor_absoluteY="632dp" />
 
-If you have any further questions or concerns please email us at varaplatformtest@gmail.com"
-        android:textSize="36sp"
-        tools:layout_editor_absoluteX="201dp"
-        tools:layout_editor_absoluteY="103dp" />
+    <Button
+        android:id="@+id/buttonYES"
+        android:layout_width="190dp"
+        android:layout_height="64dp"
+        android:background="@drawable/custom_rounded_corners"
+        android:text="YES"
+        android:textColor="#FFF"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="399dp"
+        tools:layout_editor_absoluteY="486dp" />
+
+    <Button
+        android:id="@+id/buttonNO"
+        android:layout_width="190dp"
+        android:layout_height="64dp"
+        android:background="@drawable/custom_rounded_corners"
+        android:text="NO"
+        android:textColor="#FFF"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="646dp"
+        tools:layout_editor_absoluteY="486dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
