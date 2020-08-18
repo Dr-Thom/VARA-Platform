@@ -10,15 +10,15 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="746dp"
-        android:layout_height="601dp"
+        android:layout_width="1136dp"
+        android:layout_height="422dp"
         android:ems="50"
         android:text="Thank you for watching our sponsors and the important info they shared with you.  please patronize these sponsors since they are paying to keep fare costs down while giving a better income to your driver, you are entitled to special discounts for participating.If you would like more information on these special discounts, please tap the flowing 'YES' button and we'll follow up with an email that includes your personal discounts."
         android:textColor="@color/colorAccent"
         android:textColorHint="@color/colorAccent"
         android:textSize="42sp"
-        tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="230dp" />
+        tools:layout_editor_absoluteX="64dp"
+        tools:layout_editor_absoluteY="33dp" />
 
     <TextView
         android:id="@+id/textView"
@@ -28,8 +28,8 @@
         android:textColor="@color/colorAccent"
         android:textColorHint="@color/colorAccent"
         android:textSize="32sp"
-        tools:layout_editor_absoluteX="50dp"
-        tools:layout_editor_absoluteY="863dp" />
+        tools:layout_editor_absoluteX="290dp"
+        tools:layout_editor_absoluteY="632dp" />
 
     <Button
         android:id="@+id/buttonYES"
@@ -40,8 +40,8 @@
         android:textColor="#FFF"
         android:textSize="30sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="438dp"
-        tools:layout_editor_absoluteY="1027dp" />
+        tools:layout_editor_absoluteX="399dp"
+        tools:layout_editor_absoluteY="486dp" />
 
     <Button
         android:id="@+id/buttonNO"
@@ -52,7 +52,7 @@
         android:textColor="#FFF"
         android:textSize="30sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="130dp"
-        tools:layout_editor_absoluteY="1027dp" />
+        tools:layout_editor_absoluteX="646dp"
+        tools:layout_editor_absoluteY="486dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
