@@ -9,13 +9,25 @@ import android.widget.Button;
 import com.vara.platform.HelperMethods.DBHelper;
 
 public class MainActivity extends AppCompatActivity {
-    Button signup;
+    Button signup, backButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        signup = findViewById(R.id.buttonSignUp);
+        //signup = findViewById(R.id.buttonSignUp);
+        backButton = findViewById(R.id.backButton);
+
+        backButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, LogoActivity.class);
+                startActivity(intent);
+                //setContentView(R.layout.loginpage);
+                //Toast.makeText(MainActivity.this, "You clicked on ImageView", Toast.LENGTH_LONG).show();
+            }
+        });
     }
     public void goToSignUpPage (View view){
         Intent instant = new Intent(this, SignUp.class);
