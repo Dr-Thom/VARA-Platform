@@ -3,4 +3,5 @@
     <dimen name="buttonTextSize">36sp</dimen>
     <dimen name="buttonWidth">300dp</dimen>
     <dimen name="buttonHeight">96dp</dimen>
+    <dimen name="boldText">bold</dimen>
 </resources>
