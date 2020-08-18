@@ -84,7 +84,7 @@ public class LogoActivity extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }
-        }, 10000);
+        }, 15000);
     }
 
     @Override
