@@ -73,6 +73,7 @@ public class LogoActivity extends AppCompatActivity {
             }
         });*/
 
+
         timer= new Timer();
         timer.schedule(new TimerTask(){
             @Override

@@ -9,6 +9,7 @@
     <string name="label_sign_up">Sign-Up</string>
     <string name="label_home">Home</string>
     <string name="label_continue">Continue</string>
+    <string name="label_back">Back</string>
 
     <string name="fname">First Name</string>
     <string name="lname">Last Name</string>

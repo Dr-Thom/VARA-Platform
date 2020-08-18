@@ -38,7 +38,7 @@ public class LoginActivity extends AppCompatActivity {
 // finally change the color
         window.setStatusBarColor(ContextCompat.getColor(LoginActivity.this,R.color.colorPink));
 
-        homeButton = (Button) findViewById(R.id.homeButton);
+//        homeButton = (Button) findViewById(R.id.homeButton);
         loginButton = (Button) findViewById(R.id.loginButton);
         signUpButton = (Button) findViewById(R.id.signupButton);
 
@@ -46,16 +46,16 @@ public class LoginActivity extends AppCompatActivity {
         editPassword = (TextView) findViewById(R.id.editPassword);
 
 
-         homeButton.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-//                setContentView(R.layout.logopage);
-                Intent intent = new Intent(LoginActivity.this, LogoActivity.class);
-                startActivity(intent);
-                //Toast.makeText(MainActivity.this, "You clicked on ImageView", Toast.LENGTH_LONG).show();
-            }
-        });
+//         homeButton.setOnClickListener(new View.OnClickListener() {
+//
+//            @Override
+//            public void onClick(View v) {
+////                setContentView(R.layout.logopage);
+//                Intent intent = new Intent(LoginActivity.this, LogoActivity.class);
+//                startActivity(intent);
+//                //Toast.makeText(MainActivity.this, "You clicked on ImageView", Toast.LENGTH_LONG).show();
+//            }
+//        });
 
         loginButton.setOnClickListener(new View.OnClickListener() {
 
