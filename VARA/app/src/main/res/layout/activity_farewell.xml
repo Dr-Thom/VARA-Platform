@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,50 +10,60 @@
 
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textView1"
         android:layout_width="1136dp"
         android:layout_height="422dp"
+        android:layout_marginTop="24dp"
         android:ems="50"
-        android:text="Thank you for watching our sponsors and the important info they shared with you.  please patronize these sponsors since they are paying to keep fare costs down while giving a better income to your driver, you are entitled to special discounts for participating.If you would like more information on these special discounts, please tap the flowing 'YES' button and we'll follow up with an email that includes your personal discounts."
+        android:text="@string/farewell_msg_body"
         android:textColor="@color/colorAccent"
         android:textColorHint="@color/colorAccent"
         android:textSize="42sp"
-        tools:layout_editor_absoluteX="64dp"
-        tools:layout_editor_absoluteY="33dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.347"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textView2"
         android:layout_width="701dp"
         android:layout_height="128dp"
-        android:text="If you have any further questions or concerns please email us at varaplatformtest@gmail.com"
+        android:text="@string/farewell_msg_email"
         android:textColor="@color/colorAccent"
         android:textColorHint="@color/colorAccent"
         android:textSize="32sp"
-        tools:layout_editor_absoluteX="290dp"
-        tools:layout_editor_absoluteY="632dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonNO" />
 
     <Button
         android:id="@+id/buttonYES"
         android:layout_width="190dp"
         android:layout_height="64dp"
         android:background="@drawable/custom_rounded_corners"
-        android:text="YES"
+        android:text="@string/yes"
         android:textColor="#FFF"
         android:textSize="30sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="399dp"
-        tools:layout_editor_absoluteY="486dp" />
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toStartOf="@+id/buttonNO"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView1" />
 
     <Button
         android:id="@+id/buttonNO"
         android:layout_width="190dp"
         android:layout_height="64dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="296dp"
         android:background="@drawable/custom_rounded_corners"
-        android:text="NO"
+        android:text="@string/no"
         android:textColor="#FFF"
         android:textSize="30sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="646dp"
-        tools:layout_editor_absoluteY="486dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
