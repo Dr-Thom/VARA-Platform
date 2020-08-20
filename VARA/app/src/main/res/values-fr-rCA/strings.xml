@@ -10,6 +10,11 @@
     <string name="label_sign_up">Sign-Up FR</string>
     <string name="label_home">Maison</string>
     <string name="label_continue">Continue</string>
+    <string name="label_back">Back</string>
+    <string name="label_admin">Admin</string>
+    <string name="yes">OUI</string>
+    <string name="no">NON</string>
+
 
     <string name="fname">Prenom</string>
     <string name="lname">Nom de famille</string>
