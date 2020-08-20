@@ -103,7 +103,7 @@
         android:id="@+id/textAddress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="152dp"
+        android:layout_marginBottom="324dp"
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/city"
@@ -113,8 +113,8 @@
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.482"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textPhone" />
 
     <Button
         android:id="@+id/buttonSignUp"
@@ -125,22 +125,22 @@
         android:textColor="#FFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/buttonLogin"
-        app:layout_constraintHorizontal_bias="0.706"
+        app:layout_constraintHorizontal_bias="0.625"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textAddress"
-        app:layout_constraintVertical_bias="0.586" />
+        app:layout_constraintVertical_bias="0.27" />
 
     <Button
         android:id="@+id/buttonLogin"
         style="@style/VaraTheme"
-        android:layout_marginEnd="84dp"
+        android:layout_marginEnd="92dp"
         android:background="@drawable/custom_rounded_corners"
         android:text="@string/label_login"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textAddress"
-        app:layout_constraintVertical_bias="0.589" />
+        app:layout_constraintVertical_bias="0.27" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
