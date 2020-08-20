@@ -15,6 +15,7 @@ public class FarewellActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         //if (DBHelper.getUser() != null) {
         setContentView(R.layout.activity_farewell);
+        getSupportActionBar().hide(); // hide the title bar
 
 
         timer = new Timer();
