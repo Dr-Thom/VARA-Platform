@@ -8,7 +8,7 @@
     tools:context=".WelcomeMsg">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textView1"
         android:layout_width="926dp"
         android:layout_height="1040dp"
         android:layout_marginStart="100dp"
