@@ -21,7 +21,7 @@ public class FarewellActivity extends AppCompatActivity {
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
-                Intent intent = new Intent(FarewellActivity.this, AdsDisplay.class);
+                Intent intent = new Intent(FarewellActivity.this, LogoActivity.class);
                 startActivity(intent);
                 finish();
             }
