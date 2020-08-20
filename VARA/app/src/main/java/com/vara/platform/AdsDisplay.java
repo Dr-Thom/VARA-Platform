@@ -18,6 +18,7 @@ import java.util.TimerTask;
 
 public class AdsDisplay extends AppCompatActivity {
     Timer timer;
+    private com.google.android.gms.ads.AdView mAdView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +26,16 @@ public class AdsDisplay extends AppCompatActivity {
         setContentView(R.layout.activity_ads_display);
 
         getSupportActionBar().hide();
+    
+//        java.util.List< String> testDeviceIds = java.util.Arrays.asList("33BE2250B43518CCDA7DE426D04EE231");
+//        com.google.android.gms.ads.RequestConfiguration configuration =
+//                new com.google.android.gms.ads.RequestConfiguration.Builder().setTestDeviceIds(testDeviceIds).build();
+//        MobileAds.setRequestConfiguration(configuration);
+
+//        mAdView = findViewById(R.id.adView);
+//        AdRequest adRequest = new AdRequest.Builder().build();
+//        mAdView.loadAd(adRequest);
+        
         MobileAds.initialize(this, new OnInitializationCompleteListener() {
             @Override
             public void onInitializationComplete(InitializationStatus initializationStatus) {
@@ -35,7 +46,7 @@ public class AdsDisplay extends AppCompatActivity {
         builder.forUnifiedNativeAd(new UnifiedNativeAd.OnUnifiedNativeAdLoadedListener() {
             @Override
             public void onUnifiedNativeAdLoaded(UnifiedNativeAd unifiedNativeAd) {
-                TemplateView templateView = findViewById(R.id.ads_view);
+                TemplateView templateView = findViewById( com.vara.platform.R.id.adView);
                 templateView.setNativeAd(unifiedNativeAd);
 
             }
