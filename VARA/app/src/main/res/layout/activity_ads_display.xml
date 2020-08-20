@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AdsDisplay">
+    tools:context=".AdsDisplay"
+    tools:showIn="@layout/activity_ads_display">
 
     <com.google.android.ads.nativetemplates.TemplateView
         android:id="@+id/ads_view"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="245dp"
-        app:gnt_template_type="@layout/gnt_medium_template_view"
+        app:gnt_template_type="@layout/gnt_small_template_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"

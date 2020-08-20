@@ -23,13 +23,18 @@ public class AdsDisplay extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ads_display);
-        MobileAds.initialize(this, new OnInitializationCompleteListener() {
-            @Override
-            public void onInitializationComplete(InitializationStatus initializationStatus) {
-
-            }
-        });
-        AdLoader.Builder builder = new AdLoader.Builder(this, getString(R.string.nativeas_ad_unit_id));
+        
+        MobileAds.initialize(this, "ca-app-pub-3228504719032164/2388548591");
+//                , new OnInitializationCompleteListener() {
+//            @Override
+//            public void onInitializationComplete(InitializationStatus initializationStatus) {
+//            System.console().printf( initializationStatus.toString() );
+//            }
+//        });
+        //AdLoader.Builder builder = new AdLoader.Builder(this, getString(R.string.nativeas_ad_unit_id));
+        //AdLoader.Builder builder = new AdLoader.Builder(this, "ca-app-pub-3228504719032164/3318486888");
+        AdLoader.Builder builder = new AdLoader.Builder(this, "ca-app-pub-3940256099942544/6300978111");
+        
         builder.forUnifiedNativeAd(new UnifiedNativeAd.OnUnifiedNativeAdLoadedListener() {
             @Override
             public void onUnifiedNativeAdLoaded(UnifiedNativeAd unifiedNativeAd) {
