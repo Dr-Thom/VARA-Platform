@@ -28,7 +28,7 @@ public class UserPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_userpage);
-
+        getSupportActionBar().hide(); // hide the title bar
         //initializing TextViews
         emailTV = findViewById(R.id.email_tv);
         firstNameTV = findViewById(R.id.firstName_tv);
