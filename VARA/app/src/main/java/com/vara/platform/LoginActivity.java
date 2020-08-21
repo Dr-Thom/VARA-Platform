@@ -5,6 +5,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -14,12 +15,13 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.vara.platform.HelperMethods.DBHelper;
+import com.vara.platform.HelperMethods.VaraDbHelperSql;
 
 public class LoginActivity extends AppCompatActivity {
     Button homeButton, loginButton, signUpButton;
     TextView editEmailAddress, editPassword;
     AlertDialog dialog;
-
+    VaraDbHelperSql helper;
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +30,9 @@ public class LoginActivity extends AppCompatActivity {
 
 //        ConfigClass config = new ConfigClass(LogoActivity.this);
 //        config.setStatusBar();
-
+        helper = new VaraDbHelperSql(this);
+        SQLiteDatabase db = helper.getWritableDatabase();
+        helper.onCreate(db);
         getSupportActionBar().hide(); // hide the title bar
         Window window = LoginActivity.this.getWindow();
 //// clear FLAG_TRANSLUCENT_STATUS flag:
