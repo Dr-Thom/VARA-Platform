@@ -7,31 +7,30 @@
                                                    tools:context = ".AdsDisplay">
 
     <com.google.android.ads.nativetemplates.TemplateView
-        xmlns:ads="http://schemas.android.com/apk/res-auto"
         android:id = "@+id/ads_view"
-        android:layout_width = "match_parent"
-        android:layout_height = "match_parent"
-        android:layout_marginStart = "16dp"
-        android:layout_marginEnd = "245dp"
+        android:layout_width = "918dp"
+        android:layout_height = "259dp"
+        app:adSize = "BANNER"
+        app:adUnitId = "@string/nativeas_ad_unit_id"
         app:gnt_template_type = "@layout/gnt_small_template_view"
         app:layout_constraintBottom_toBottomOf = "parent"
         app:layout_constraintEnd_toEndOf = "parent"
-        app:layout_constraintHorizontal_bias = "0.0"
         app:layout_constraintStart_toStartOf = "parent"
-        app:layout_constraintTop_toTopOf = "parent"
-        app:layout_constraintVertical_bias = "1.0"
-        ads:adSize="BANNER"
-        ads:adUnitId="@string/nativeas_ad_unit_id"/>
+        app:layout_constraintTop_toTopOf = "parent">
+
+    </com.google.android.ads.nativetemplates.TemplateView>
 
     <com.google.android.gms.ads.AdView
-        xmlns:ads="http://schemas.android.com/apk/res-auto"
         android:id = "@+id/adView"
-        android:layout_width = "wrap_content"
-        android:layout_height = "wrap_content"
+        android:layout_width = "539dp"
+        android:layout_height = "406dp"
+        app:adSize = "BANNER"
+        app:adUnitId = "@string/nativeas_ad_unit_id"
         app:layout_constraintBottom_toBottomOf = "parent"
         app:layout_constraintEnd_toEndOf = "parent"
         app:layout_constraintStart_toStartOf = "parent"
         app:layout_constraintTop_toTopOf = "parent"
-        ads:adSize="BANNER"
-        ads:adUnitId="@string/nativeas_ad_unit_id"/>
+        app:layout_constraintVertical_bias = "0.799"
+        android:visibility="gone"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

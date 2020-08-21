@@ -27,10 +27,10 @@ public class AdsDisplay extends AppCompatActivity {
 
         getSupportActionBar().hide();
     
-//        java.util.List< String> testDeviceIds = java.util.Arrays.asList("33BE2250B43518CCDA7DE426D04EE231");
-//        com.google.android.gms.ads.RequestConfiguration configuration =
-//                new com.google.android.gms.ads.RequestConfiguration.Builder().setTestDeviceIds(testDeviceIds).build();
-//        MobileAds.setRequestConfiguration(configuration);
+        java.util.List< String> testDeviceIds = java.util.Arrays.asList(AdRequest.DEVICE_ID_EMULATOR);
+        com.google.android.gms.ads.RequestConfiguration configuration =
+                new com.google.android.gms.ads.RequestConfiguration.Builder().setTestDeviceIds(testDeviceIds).build();
+        MobileAds.setRequestConfiguration(configuration);
 
 //        mAdView = findViewById(R.id.adView);
 //        AdRequest adRequest = new AdRequest.Builder().build();
@@ -46,7 +46,7 @@ public class AdsDisplay extends AppCompatActivity {
         builder.forUnifiedNativeAd(new UnifiedNativeAd.OnUnifiedNativeAdLoadedListener() {
             @Override
             public void onUnifiedNativeAdLoaded(UnifiedNativeAd unifiedNativeAd) {
-                TemplateView templateView = findViewById( com.vara.platform.R.id.adView);
+                TemplateView templateView = findViewById( com.vara.platform.R.id.ads_view);
                 templateView.setNativeAd(unifiedNativeAd);
 
             }
