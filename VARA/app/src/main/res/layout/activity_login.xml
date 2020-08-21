@@ -94,10 +94,13 @@
     <Button
         android:id = "@+id/loginButton"
         style = "@style/VaraTheme"
-        android:layout_alignParentEnd = "true"
+        android:layout_alignParentStart = "true"
         android:layout_alignParentBottom = "true"
-        android:layout_marginEnd = "800dp"
+        android:layout_marginStart = "300dp"
+        android:layout_marginEnd = "80dp"
         android:layout_marginBottom = "100dp"
+        android:layout_toStartOf = "@+id/signupButton"
+        android:background = "@drawable/custom_rounded_corners"
         android:text = "@string/label_login" />
 
     <Button
@@ -117,10 +120,11 @@
     <Button
         android:id = "@+id/signupButton"
         style = "@style/VaraTheme"
+        android:layout_alignParentEnd = "true"
         android:layout_alignParentBottom = "true"
-        android:layout_marginStart = "800dp"
+        android:layout_marginEnd = "300dp"
         android:layout_marginBottom = "100dp"
-        android:layout_toEndOf = "@+id/homeButton"
+        android:background = "@drawable/custom_rounded_corners"
         android:text = "@string/label_sign_up" />
 
 </RelativeLayout>
