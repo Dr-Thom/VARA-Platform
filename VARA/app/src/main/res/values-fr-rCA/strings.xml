@@ -22,5 +22,6 @@
     <string name="city">Ville</string>
 
     <string name="user_information">Information de ???</string>
+    <string name="farewell_email">varaplatformtest@gmail.com</string>
 
 </resources>

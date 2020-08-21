@@ -1,10 +1,9 @@
 package com.vara.platform;
-
-import android.content.Intent;
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
-
+import android.content.Intent;
 import androidx.appcompat.app.AppCompatActivity;
-
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -30,3 +29,6 @@ public class FarewellActivity extends AppCompatActivity {
         //} else { return; }
     }
 }
+
+
+
