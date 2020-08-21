@@ -1,10 +1,8 @@
 package com.vara.platform;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
-
 import com.google.android.ads.nativetemplates.TemplateView;
 import com.google.android.gms.ads.AdLoader;
 import com.google.android.gms.ads.AdRequest;
@@ -12,7 +10,6 @@ import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.formats.UnifiedNativeAd;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
-
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -25,6 +22,7 @@ public class AdsDisplay extends AppCompatActivity {
         setContentView(R.layout.activity_ads_display);
 
         getSupportActionBar().hide();
+        //ads code
         MobileAds.initialize(this, new OnInitializationCompleteListener() {
             @Override
             public void onInitializationComplete(InitializationStatus initializationStatus) {
@@ -37,13 +35,12 @@ public class AdsDisplay extends AppCompatActivity {
             public void onUnifiedNativeAdLoaded(UnifiedNativeAd unifiedNativeAd) {
                 TemplateView templateView = findViewById(R.id.ads_view);
                 templateView.setNativeAd(unifiedNativeAd);
-
             }
         });
         AdLoader adLoader = builder.build();
         AdRequest adRequest = new AdRequest.Builder().build();
         adLoader.loadAd(adRequest);
-
+        //next screen code
         timer = new Timer();
         timer.schedule(new TimerTask() {
             @Override
@@ -53,6 +50,5 @@ public class AdsDisplay extends AppCompatActivity {
                 finish();
             }
         }, 60000);
-
     }
 }
