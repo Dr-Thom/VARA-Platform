@@ -15,18 +15,18 @@ import java.util.TimerTask;
 
 public class AdsDisplay extends AppCompatActivity {
     Timer timer;
-
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ads_display);
-
+        
         getSupportActionBar().hide();
         //ads code
         MobileAds.initialize(this, new OnInitializationCompleteListener() {
             @Override
             public void onInitializationComplete(InitializationStatus initializationStatus) {
-
+            
             }
         });
         AdLoader.Builder builder = new AdLoader.Builder(this, getString(R.string.nativeas_ad_unit_id));
@@ -52,3 +52,6 @@ public class AdsDisplay extends AppCompatActivity {
         }, 60000);
     }
 }
+
+
+
