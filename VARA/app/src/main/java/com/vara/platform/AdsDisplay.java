@@ -52,6 +52,3 @@ public class AdsDisplay extends AppCompatActivity {
         }, 60000);
     }
 }
-
-
-

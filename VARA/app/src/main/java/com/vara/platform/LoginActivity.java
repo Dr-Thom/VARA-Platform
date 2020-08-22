@@ -26,42 +26,23 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-//        ConfigClass config = new ConfigClass(LogoActivity.this);
-//        config.setStatusBar();
-
         getSupportActionBar().hide(); // hide the title bar
         Window window = LoginActivity.this.getWindow();
-//// clear FLAG_TRANSLUCENT_STATUS flag:
-        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-//// add FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS flag to the window
-        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-// finally change the color
-        window.setStatusBarColor(ContextCompat.getColor(LoginActivity.this,R.color.colorPink));
+        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS); // clear FLAG_TRANSLUCENT_STATUS flag:
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS); // add FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS flag to the window
+        window.setStatusBarColor(ContextCompat.getColor(LoginActivity.this,R.color.colorPink)); // finally change the color
 
-//        homeButton = (Button) findViewById(R.id.homeButton);
         loginButton = (Button) findViewById(R.id.loginButton);
         signUpButton = (Button) findViewById(R.id.signupButton);
 
         editEmailAddress = (TextView) findViewById(R.id.editEmailAddress);
         editPassword = (TextView) findViewById(R.id.editPassword);
 
-
-//         homeButton.setOnClickListener(new View.OnClickListener() {
-//
-//            @Override
-//            public void onClick(View v) {
-////                setContentView(R.layout.logopage);
-//                Intent intent = new Intent(LoginActivity.this, LogoActivity.class);
-//                startActivity(intent);
-//                //Toast.makeText(MainActivity.this, "You clicked on ImageView", Toast.LENGTH_LONG).show();
-//            }
-//        });
-
         loginButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                doSomething();
+                doLogin();
             }
         });
 
@@ -69,17 +50,12 @@ public class LoginActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-//                setContentView(R.layout.logopage);
                 Intent intent = new Intent(LoginActivity.this, SignUp.class);
                 startActivity(intent);
-                //Toast.makeText(MainActivity.this, "You clicked on ImageView", Toast.LENGTH_LONG).show();
-
             }
         });
     }
-    public void doSomething(){
-//        Intent intent = new Intent(MainActivity2.this, MainActivity.class);
-//        startActivity(intent);
+    public void doLogin(){
         String email = editEmailAddress.getText().toString();
         String password = editPassword.getText().toString();
         if (email.equals("") && password.equals("") || password.equals("") || email.equals("")) {
