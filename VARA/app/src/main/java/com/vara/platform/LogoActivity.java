@@ -57,7 +57,7 @@ public class LogoActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LogoActivity.this, MainActivity.class);
+                Intent intent = new Intent(LogoActivity.this, UserPage.class);
                 startActivity(intent);
                 timer.cancel();
                 //setContentView(R.layout.loginpage);
