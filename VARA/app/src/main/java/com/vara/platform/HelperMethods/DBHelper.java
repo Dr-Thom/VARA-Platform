@@ -6,9 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
-
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -24,7 +22,6 @@ import com.vara.platform.LogoActivity;
 import com.vara.platform.MainActivity;
 import com.vara.platform.Models.VaraUser;
 import com.vara.platform.SignUp;
-
 import java.util.Objects;
 
 
