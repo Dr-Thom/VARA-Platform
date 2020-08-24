@@ -7,17 +7,18 @@ import android.view.View;
 import android.widget.Button;
 
 import com.vara.platform.HelperMethods.DBHelper;
+import com.vara.platform.HelperMethods.VaraDbHelperSql;
 
 public class MainActivity extends AppCompatActivity {
     Button signup, backButton;
-
+    VaraDbHelperSql helper ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //signup = findViewById(R.id.buttonSignUp);
         backButton = findViewById(R.id.backButton);
-
+          helper = new VaraDbHelperSql(this);
         backButton.setOnClickListener(new View.OnClickListener() {
 
             @Override

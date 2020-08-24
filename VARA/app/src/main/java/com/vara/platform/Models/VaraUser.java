@@ -4,16 +4,16 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 
-public class User {
+public class VaraUser {
     private String firstName;
     private String lastName;
     private String phone;
     private String city;
     private String email;
 
-    public User() {};
+    public VaraUser() {};
 
-    public User(String firstName, String lastName, String phone, String city, String email) {
+    public VaraUser(String firstName, String lastName, String phone, String city, String email) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.phone = phone;
