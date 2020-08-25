@@ -7,10 +7,14 @@ import androidx.core.content.ContextCompat;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.vara.platform.HelperMethods.DBHelper;
 
@@ -26,7 +30,7 @@ public class LogoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_logo);
 
-        getSupportActionBar().hide(); // hide the title bar
+       // getSupportActionBar().hide(); // hide the title bar
         Window window = LogoActivity.this.getWindow();
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS); // clear FLAG_TRANSLUCENT_STATUS flag:
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS); // add FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS flag to the window
@@ -75,6 +79,33 @@ public class LogoActivity extends AppCompatActivity {
         } else {
             Intent intent = new Intent(this, LoginActivity.class);
             startActivity(intent);
+        }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main_menu, menu);
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.item1:
+                Intent intent2 = new Intent(LogoActivity.this, UserPage.class);
+                startActivity(intent2);
+                timer.cancel();
+                Toast.makeText(this, "Item 2 selected", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.item2:
+                DBHelper.signOut();
+                Intent intent = new Intent(LogoActivity.this, LoginActivity.class);
+                startActivity(intent);
+                timer.cancel();
+                Toast.makeText(this, "Item 1 selected", Toast.LENGTH_SHORT).show();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
         }
     }
 }
