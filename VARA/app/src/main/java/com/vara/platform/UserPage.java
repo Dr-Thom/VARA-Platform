@@ -7,10 +7,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.google.firebase.firestore.auth.User;
 import com.vara.platform.HelperMethods.DBHelper;
-
 import com.vara.platform.Models.VaraUser;
 import com.vara.platform.Models.ViewArray;
 
