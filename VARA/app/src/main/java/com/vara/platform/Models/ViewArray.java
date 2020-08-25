@@ -4,7 +4,6 @@ import android.view.View;
 import java.util.ArrayList;
 
 public class ViewArray {
-    View firstName, lastName, email, phone, city;
     ArrayList<View> views = new ArrayList<>();
 
     public ViewArray(View... views) {
