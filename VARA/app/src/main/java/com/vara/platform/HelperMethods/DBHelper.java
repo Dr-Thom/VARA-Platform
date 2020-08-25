@@ -32,11 +32,6 @@ public class DBHelper {
     static DocumentReference docRef;
     static String userId;
     static VaraUser varauser = new VaraUser();
-    static DBHelper dbHelper;
-
-    private DBHelper() {
-        super();
-    }
 
     public interface Update {
         void updateUI();
