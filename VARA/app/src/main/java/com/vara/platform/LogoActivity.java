@@ -92,10 +92,17 @@ public class LogoActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.item1:
-                Toast.makeText(this, "Item 1 selected", Toast.LENGTH_SHORT).show();
+                Intent intent2 = new Intent(LogoActivity.this, UserPage.class);
+                startActivity(intent2);
+                timer.cancel();
+                Toast.makeText(this, "Item 2 selected", Toast.LENGTH_SHORT).show();
                 return true;
             case R.id.item2:
-                Toast.makeText(this, "Item 2 selected", Toast.LENGTH_SHORT).show();
+                DBHelper.signOut();
+                Intent intent = new Intent(LogoActivity.this, LoginActivity.class);
+                startActivity(intent);
+                timer.cancel();
+                Toast.makeText(this, "Item 1 selected", Toast.LENGTH_SHORT).show();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
