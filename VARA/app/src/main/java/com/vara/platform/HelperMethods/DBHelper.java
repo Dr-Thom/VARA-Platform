@@ -17,9 +17,10 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.auth.User;
 import com.vara.platform.LogoActivity;
 import com.vara.platform.MainActivity;
-import com.vara.platform.Models.User;
+import com.vara.platform.Models.VaraUser;
 import com.vara.platform.SignUp;
 import java.util.Objects;
 
@@ -30,7 +31,7 @@ public class DBHelper {
     static FirebaseFirestore fstor = FirebaseFirestore.getInstance();
     static DocumentReference docRef;
     static String userId;
-    static User user = new User();
+    static VaraUser varauser = new VaraUser();
     static DBHelper dbHelper;
 
     private DBHelper() {
@@ -41,13 +42,13 @@ public class DBHelper {
         void updateUI();
     }
 
-    public static User getUser() {
-        return user;
+    public static VaraUser getUser() {
+        return varauser;
     }
 
     //Signing up the new user and then creating the user profile in UserInfo collection on Firestore database
-    public static void authenticate(final Context context, final User user, final String password) {
-        fAUTH.createUserWithEmailAndPassword(user.getEmail(), password)
+    public static void authenticate(final Context context, final VaraUser user, final String password) {
+        fAUTH.createUserWithEmailAndPassword(varauser.getEmail(), password)
             .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
 
         @SuppressLint("LongLogTag")
@@ -88,7 +89,7 @@ public class DBHelper {
             @Override
             public void onSuccess(DocumentSnapshot documentSnapshot) {
                 if (documentSnapshot.exists()) {
-                    user = documentSnapshot.toObject(User.class);
+                    varauser = documentSnapshot.toObject(VaraUser.class);
                     update.updateUI();
                 } else {
                 }
@@ -104,7 +105,7 @@ public class DBHelper {
         });
     }
 
-    public static void updateUserProfile(final User user) {
+    public static void updateUserProfile(final VaraUser user) {
         docRef.update(
                 "firstName", user.getFirstName(),
                 "lastName", user.getLastName(),
@@ -130,7 +131,7 @@ public class DBHelper {
                             @Override
                             public void onSuccess(DocumentSnapshot documentSnapshot) {
                                 if (documentSnapshot.exists()) {
-                                    user = documentSnapshot.toObject(User.class);
+                                    varauser = documentSnapshot.toObject(VaraUser.class);
                                     Toast.makeText(context, "Sign-in Successful", Toast.LENGTH_SHORT).show();
                                     Intent intent = new Intent(context, LogoActivity.class);
                                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -155,7 +156,7 @@ public class DBHelper {
     public static void signOut() {
         fAUTH.signOut();
         userId = null;
-        user = null;
+        varauser = null;
     }
 
 }
