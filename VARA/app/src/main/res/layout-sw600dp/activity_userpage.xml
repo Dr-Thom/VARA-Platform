@@ -25,12 +25,12 @@
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="32dp"
+            android:layout_height="64dp"
             android:layout_gravity="center_vertical"
             android:text="@string/user_information"
-            android:gravity="center_vertical"
+            android:textAlignment="gravity"
             android:textColor="@color/colorPink"
-            android:textSize="26sp" />
+            android:textSize="36sp" />
 
         <View
             android:layout_width="0dp"
@@ -40,7 +40,7 @@
         <ImageButton
             android:id="@+id/editButton"
             android:layout_width="wrap_content"
-            android:layout_height="32dp"
+            android:layout_height="64dp"
             android:layout_gravity="center_vertical"
             android:layout_marginEnd="0dp"
             android:background="@color/colorBlack"
@@ -50,7 +50,7 @@
         <ImageButton
             android:id="@+id/saveButton"
             android:layout_width="wrap_content"
-            android:layout_height="32dp"
+            android:layout_height="64dp"
             android:layout_gravity="center_vertical"
             android:layout_marginEnd="0dp"
             android:background="#000000"
@@ -76,23 +76,23 @@
 
         <TextView
             android:id="@+id/em"
-            android:layout_width="140dp"
-            android:layout_height="32dp"
-            android:layout_marginEnd="10dp"
+            android:layout_width="204dp"
+            android:layout_height="64dp"
+            android:layout_marginEnd="16dp"
             android:gravity="center_vertical"
             android:text="@string/label_email"
             android:textColor="@color/colorPink"
-            android:textSize="20dp" />
+            android:textSize="28sp" />
 
         <TextView
             android:id="@+id/email_tv"
             android:layout_width="match_parent"
-            android:layout_height="32dp"
+            android:layout_height="64dp"
             android:gravity="center_vertical"
-            android:paddingStart="1dp"
+            android:paddingStart="6dp"
             tools:text="mail@email.com"
             android:textColor="@color/colorAccent"
-            android:textSize="20dp"
+            android:textSize="28sp"
             android:visibility="visible" />
 
     </LinearLayout>
@@ -106,34 +106,34 @@
 
         <TextView
             android:id="@+id/fn"
-            android:layout_width="140dp"
-            android:layout_height="32dp"
-            android:layout_marginEnd="10dp"
+            android:layout_width="204dp"
+            android:layout_height="64dp"
+            android:layout_marginEnd="16dp"
             android:gravity="center_vertical"
             android:text="@string/fname"
             android:textColor="@color/colorPink"
-            android:textSize="20dp" />
+            android:textSize="28sp" />
 
         <TextView
             android:id="@+id/firstName_tv"
             android:layout_width="match_parent"
-            android:layout_height="32dp"
+            android:layout_height="64dp"
             android:gravity="center_vertical"
-            android:paddingStart="1dp"
+            android:paddingStart="6dp"
             android:textColor="@color/colorAccent"
-            android:textSize="20dp"
+            android:textSize="28sp"
             android:visibility="visible"
             tools:text="first name" />
 
         <EditText
             android:id="@+id/firstName_et"
             android:layout_width="match_parent"
-            android:layout_height="32dp"
+            android:layout_height="64dp"
             android:gravity="center_vertical"
             android:inputType="textPersonName"
-            android:paddingStart="1dp"
+            android:paddingStart="6dp"
             android:textColor="#F2F2F2"
-            android:textSize="20dp"
+            android:textSize="28sp"
             android:visibility="gone"
             tools:text="first name" />
     </LinearLayout>
@@ -147,33 +147,33 @@
 
         <TextView
             android:id="@+id/ln"
-            android:layout_width="140dp"
-            android:layout_height="32dp"
-            android:layout_marginEnd="10dp"
+            android:layout_width="204dp"
+            android:layout_height="64dp"
+            android:layout_marginEnd="16dp"
             android:gravity="center_vertical"
             android:text="@string/lname"
             android:textColor="@color/colorPink"
-            android:textSize="20dp" />
+            android:textSize="28sp" />
 
         <TextView
             android:id="@+id/lastName_tv"
             android:layout_width="match_parent"
-            android:layout_height="32dp"
+            android:layout_height="64dp"
             android:gravity="center_vertical"
-            android:paddingStart="1dp"
+            android:paddingStart="6dp"
             android:textColor="@color/colorAccent"
-            android:textSize="20dp"
+            android:textSize="28sp"
             android:visibility="visible"
             tools:text="last name" />
 
         <EditText
             android:id="@+id/lastName_et"
             android:layout_width="match_parent"
-            android:layout_height="32dp"
+            android:layout_height="64dp"
             android:inputType="textPersonName"
-            android:paddingStart="1dp"
+            android:paddingStart="6dp"
             android:textColor="#F2F2F2"
-            android:textSize="20dp"
+            android:textSize="28sp"
             android:visibility="gone"
             tools:text="last name" />
     </LinearLayout>
@@ -187,33 +187,33 @@
 
         <TextView
             android:id="@+id/p"
-            android:layout_width="140dp"
-            android:layout_height="32dp"
-            android:layout_marginEnd="10dp"
+            android:layout_width="204dp"
+            android:layout_height="64dp"
+            android:layout_marginEnd="16dp"
             android:gravity="center_vertical"
             android:text="@string/phone"
             android:textColor="@color/colorPink"
-            android:textSize="20dp" />
+            android:textSize="28sp" />
 
         <TextView
             android:id="@+id/phone_tv"
             android:layout_width="match_parent"
-            android:layout_height="32dp"
+            android:layout_height="64dp"
             android:gravity="center_vertical"
-            android:paddingStart="1dp"
+            android:paddingStart="6dp"
             android:textColor="@color/colorAccent"
-            android:textSize="20dp"
+            android:textSize="28sp"
             android:visibility="visible"
             tools:text="###-###-####" />
 
         <EditText
             android:id="@+id/phone_et"
             android:layout_width="match_parent"
-            android:layout_height="32dp"
+            android:layout_height="64dp"
             android:inputType="phone"
-            android:paddingStart="1dp"
+            android:paddingStart="6dp"
             android:textColor="#F2F2F2"
-            android:textSize="20dp"
+            android:textSize="28sp"
             android:visibility="gone"
             tools:text="###-###-####" />
     </LinearLayout>
@@ -227,33 +227,33 @@
 
         <TextView
             android:id="@+id/c"
-            android:layout_width="140dp"
-            android:layout_height="32dp"
-            android:layout_marginEnd="10dp"
+            android:layout_width="204dp"
+            android:layout_height="64dp"
+            android:layout_marginEnd="16dp"
             android:gravity="center_vertical"
             android:text="@string/city"
             android:textColor="@color/colorPink"
-            android:textSize="20dp" />
+            android:textSize="28sp" />
 
         <TextView
             android:id="@+id/city_tv"
             android:layout_width="match_parent"
-            android:layout_height="32dp"
+            android:layout_height="64dp"
             android:gravity="center_vertical"
-            android:paddingStart="1dp"
+            android:paddingStart="6dp"
             android:textColor="@color/colorAccent"
-            android:textSize="20dp"
+            android:textSize="28sp"
             android:visibility="visible"
             tools:text="city" />
 
         <EditText
             android:id="@+id/city_et"
             android:layout_width="match_parent"
-            android:layout_height="32dp"
+            android:layout_height="64dp"
             android:inputType="text"
-            android:paddingStart="1dp"
+            android:paddingStart="6dp"
             android:textColor="#F2F2F2"
-            android:textSize="20dp"
+            android:textSize="28sp"
             android:visibility="gone"
             tools:text="city" />
     </LinearLayout>
