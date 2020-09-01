@@ -127,7 +127,7 @@
                 android:paddingStart="1dp"
                 android:textColor="@color/colorAccent"
                 android:textSize="20dp"
-                android:visibility="gone"
+                android:visibility="visible"
                 tools:text="first name" />
 
             <EditText
@@ -139,7 +139,7 @@
                 android:paddingStart="1dp"
                 android:textColor="#F2F2F2"
                 android:textSize="20dp"
-                android:visibility="visible"
+                android:visibility="gone"
                 tools:text="first name" />
         </LinearLayout>
 
