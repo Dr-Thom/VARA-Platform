@@ -14,7 +14,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-import com.vara.platform.HelperMethods.DBHelper;
+import com.vara.platform.HelperMethods.VaraDbHelperFb;
 import com.vara.platform.HelperMethods.VaraDbHelperSql;
 
 public class LoginActivity extends AppCompatActivity {
@@ -91,12 +91,12 @@ public class LoginActivity extends AppCompatActivity {
             return;
         }
 
-        DBHelper.signIn(this, email, password);
+        VaraDbHelperFb.signIn(this, email, password);
     }
 
     @Override
     public void onBackPressed() {
-        if (DBHelper.getUser() != null) {
+        if (VaraDbHelperFb.getUser() != null) {
             super.onBackPressed();
         } else {
             moveTaskToBack(true);
