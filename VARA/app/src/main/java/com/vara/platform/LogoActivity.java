@@ -13,6 +13,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 
 import com.vara.platform.HelperMethods.DBHelper;
+import com.vara.platform.MenuPages.UserPage;
 
 import java.util.Timer;
 import java.util.TimerTask;

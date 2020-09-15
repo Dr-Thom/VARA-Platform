@@ -1,4 +1,4 @@
-package com.vara.platform;
+package com.vara.platform.MenuPages;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,8 +8,10 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import com.vara.platform.HelperMethods.DBHelper;
+import com.vara.platform.LoginActivity;
 import com.vara.platform.Models.User;
 import com.vara.platform.Models.ViewArray;
+import com.vara.platform.R;
 
 public class UserPage extends AppCompatActivity {
 
