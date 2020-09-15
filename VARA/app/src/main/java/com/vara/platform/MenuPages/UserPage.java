@@ -9,7 +9,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import com.vara.platform.HelperMethods.DBHelper;
 import com.vara.platform.LoginActivity;
-import com.vara.platform.Models.User;
+import com.vara.platform.Models.VaraUser;
 import com.vara.platform.Models.ViewArray;
 import com.vara.platform.R;
 
@@ -20,8 +20,8 @@ public class UserPage extends AppCompatActivity {
     EditText firstNameET, lastNameET, phoneET, cityET;
     ImageButton editButton, saveButton, backButton;
     ViewArray userTVs, userETs;
-    User currentUserInfo;
-    User updatedUserInfo;
+    VaraUser currentUserInfo;
+    VaraUser updatedUserInfo;
 
 
     @Override
@@ -69,7 +69,7 @@ public class UserPage extends AppCompatActivity {
                 saveButton.setVisibility(View.GONE);
 
                 //creating a new user with the updated inputs
-                updatedUserInfo = new User(
+                updatedUserInfo = new VaraUser(
                         firstNameET.getText().toString(),
                         lastNameET.getText().toString(),
                         phoneET.getText().toString(),
