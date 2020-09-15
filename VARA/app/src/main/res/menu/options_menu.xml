@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/userInfo"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_account_circle_24"
+        android:title="User Info"
+        android:visible="true" />
+    <item
+        android:id="@+id/settings"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_settings_24"
+        android:title="Settings"
+        android:visible="false"
+        android:tooltipText="Settings"/>
+    <item
+        android:id="@+id/signOff"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_drive_eta_24"
+        android:title="Sign Out"
+        android:visible="true" />
+</menu>

@@ -16,7 +16,8 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.vara.platform.HelperMethods.DBHelper;
+import com.vara.platform.HelperMethods.VaraDbHelperFb;
+import com.vara.platform.MenuPages.UserPage;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -44,7 +45,7 @@ public class LogoActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                DBHelper.signOut();
+                VaraDbHelperFb.signOut();
                 Intent intent = new Intent(LogoActivity.this, LoginActivity.class);
                 startActivity(intent);
                 timer.cancel();
@@ -74,7 +75,7 @@ public class LogoActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        if (DBHelper.getUser() != null) {
+        if (VaraDbHelperFb.getUser() != null) {
             super.onBackPressed();
         } else {
             Intent intent = new Intent(this, LoginActivity.class);
@@ -98,7 +99,7 @@ public class LogoActivity extends AppCompatActivity {
                 Toast.makeText(this, "Item 2 selected", Toast.LENGTH_SHORT).show();
                 return true;
             case R.id.item2:
-                DBHelper.signOut();
+                VaraDbHelperFb.signOut();
                 Intent intent = new Intent(LogoActivity.this, LoginActivity.class);
                 startActivity(intent);
                 timer.cancel();

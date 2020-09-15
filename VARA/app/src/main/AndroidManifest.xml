@@ -23,7 +23,7 @@
         </activity>
         <activity android:name=".SignUp" />
         <activity android:name=".FarewellActivity" />
-        <activity android:name=".UserPage" />
+        <activity android:name=".MenuPages.UserPage" />
         <activity android:name=".LogoActivity"></activity>
 
         <meta-data
