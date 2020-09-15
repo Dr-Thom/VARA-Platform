@@ -5,9 +5,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-
 import com.vara.platform.HelperMethods.DBHelper;
 import com.vara.platform.HelperMethods.VaraDbHelperSql;
+import com.vara.platform.MenuPages.UserPage;
+
 
 public class MainActivity extends AppCompatActivity {
     Button signup, backButton;
