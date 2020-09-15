@@ -18,7 +18,7 @@ public class VaraDbHelperSql extends SQLiteOpenHelper {
     public VaraDbHelperSql(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
         this.context = context;
-        Message.message(context, "Started....");
+        Message.message(context, "DB Started....");
     }
 
     @Override

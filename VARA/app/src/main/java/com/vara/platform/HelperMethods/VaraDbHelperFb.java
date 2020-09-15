@@ -57,7 +57,6 @@ public class VaraDbHelperFb {
                     userId = Objects.requireNonNull(fAUTH.getCurrentUser()).getUid();
 //                    Toast.makeText(context, "Sign-up successful", Toast.LENGTH_LONG).show();
                     Message.message(context, "Sign-up successful");
-
                     docRef = fstor.collection("UserInfo").document(userId);
 
                     docRef.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
