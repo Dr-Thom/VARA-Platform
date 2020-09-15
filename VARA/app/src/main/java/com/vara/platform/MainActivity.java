@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.vara.platform.HelperMethods.DBHelper;
+import com.vara.platform.HelperMethods.VaraDbHelperFb;
 import com.vara.platform.MenuPages.UserPage;
 
 public class MainActivity extends AppCompatActivity {
@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        if (DBHelper.getUser() != null) {
+        if (VaraDbHelperFb.getUser() != null) {
             super.onBackPressed();
         } else {
             Intent intent = new Intent(this, LoginActivity.class);

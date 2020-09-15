@@ -12,7 +12,6 @@ public class VaraDbHelperSql extends SQLiteOpenHelper {
     private static final String UserInfoId = "_id";
     private static final String Email = "email";
 
-
     private static final int DATABASE_VERSION = 1;
     private Context context;
 
@@ -27,20 +26,15 @@ public class VaraDbHelperSql extends SQLiteOpenHelper {
         final String SQL_CREATE_USER_TABLE =
 
                 "CREATE TABLE " + TABLE_NAME + " (" +
-
                         UserInfoId + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-
                         Email + " TEXT NOT NULL );";
-
             try {
                 db.execSQL(SQL_CREATE_USER_TABLE);
                 Message.message(this.context, "Table Created");
             } catch(Exception e) {
                 Message.message(this.context, e.getMessage());
             }
-
     }
-
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
@@ -49,6 +43,5 @@ public class VaraDbHelperSql extends SQLiteOpenHelper {
         } catch (Exception e) {
 
         }
-
     }
 }
