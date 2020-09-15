@@ -8,18 +8,16 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.vara.platform.HelperMethods.DBHelper;
-import com.vara.platform.Models.User;
+import com.vara.platform.HelperMethods.VaraDbHelperFb;
+import com.vara.platform.Models.VaraUser;
 
 public class SignUp extends AppCompatActivity {
     public static final String TAG = "TAG";
@@ -27,7 +25,7 @@ public class SignUp extends AppCompatActivity {
     Button signUpButton, logInButton;
     FirebaseAuth fAUTH;
     FirebaseFirestore fstor;
-    User user;
+    VaraUser user;
 
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
@@ -107,15 +105,15 @@ public class SignUp extends AppCompatActivity {
                     return;
                 }
                 //creating a new user object based on the user inputs
-                user = new User(firstName, lastName, phone, city, Email);
+                user = new VaraUser(firstName, lastName, phone, city, Email);
                 onUserSignUp(user, Password);
             }
         });
 
     }
 
-    private void onUserSignUp(User user, String password) {
+    private void onUserSignUp(VaraUser user, String password) {
         //creating new user in database
-        DBHelper.authenticate(getApplicationContext(), user, password);
+        VaraDbHelperFb.authenticate(getApplicationContext(), user, password);
     }
 }

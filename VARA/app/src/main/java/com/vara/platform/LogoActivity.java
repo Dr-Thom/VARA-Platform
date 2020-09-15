@@ -12,7 +12,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 
-import com.vara.platform.HelperMethods.DBHelper;
+import com.vara.platform.HelperMethods.VaraDbHelperFb;
 import com.vara.platform.MenuPages.UserPage;
 
 import java.util.Timer;
@@ -41,7 +41,7 @@ public class LogoActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                DBHelper.signOut();
+                VaraDbHelperFb.signOut();
                 Intent intent = new Intent(LogoActivity.this, LoginActivity.class);
                 startActivity(intent);
                 timer.cancel();
@@ -71,7 +71,7 @@ public class LogoActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        if (DBHelper.getUser() != null) {
+        if (VaraDbHelperFb.getUser() != null) {
             super.onBackPressed();
         } else {
             Intent intent = new Intent(this, LoginActivity.class);

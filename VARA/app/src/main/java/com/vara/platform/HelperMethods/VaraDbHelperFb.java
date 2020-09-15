@@ -19,21 +19,21 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.vara.platform.LogoActivity;
 import com.vara.platform.MainActivity;
-import com.vara.platform.Models.User;
+import com.vara.platform.Models.VaraUser;
 import com.vara.platform.SignUp;
 import java.util.Objects;
 
 
-public class DBHelper {
+public class VaraDbHelperFb {
     static String TAG = "DBHelper";
     static FirebaseAuth fAUTH = FirebaseAuth.getInstance();
     static FirebaseFirestore fstor = FirebaseFirestore.getInstance();
     static DocumentReference docRef;
     static String userId;
-    static User user = new User();
-    static DBHelper dbHelper;
+    static VaraUser varauser = new VaraUser();
+    static VaraDbHelperFb varaDbHelperFb;
 
-    private DBHelper() {
+    private VaraDbHelperFb() {
         super();
     }
 
@@ -41,13 +41,13 @@ public class DBHelper {
         void updateUI();
     }
 
-    public static User getUser() {
-        return user;
+    public static VaraUser getUser() {
+        return varauser;
     }
 
     //Signing up the new user and then creating the user profile in UserInfo collection on Firestore database
-    public static void authenticate(final Context context, final User user, final String password) {
-        fAUTH.createUserWithEmailAndPassword(user.getEmail(), password)
+    public static void authenticate(final Context context, final VaraUser user, final String password) {
+        fAUTH.createUserWithEmailAndPassword(varauser.getEmail(), password)
             .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
 
         @SuppressLint("LongLogTag")
@@ -55,7 +55,8 @@ public class DBHelper {
         public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
                     userId = Objects.requireNonNull(fAUTH.getCurrentUser()).getUid();
-                    Toast.makeText(context, "Sign-up successful", Toast.LENGTH_LONG).show();
+//                    Toast.makeText(context, "Sign-up successful", Toast.LENGTH_LONG).show();
+                    Message.message(context, "Sign-up successful");
 
                     docRef = fstor.collection("UserInfo").document(userId);
 
@@ -68,7 +69,8 @@ public class DBHelper {
                         }
                     });
                 } else {
-                    Toast.makeText(context, task.getException().getMessage(), Toast.LENGTH_LONG).show();
+//                    Toast.makeText(context, task.getException().getMessage(), Toast.LENGTH_LONG).show();
+                    Message.message(context, task.getException().getMessage());
                     Intent intent = new Intent(context, SignUp.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     context.startActivity(intent);
@@ -78,7 +80,8 @@ public class DBHelper {
             .addOnFailureListener(new OnFailureListener() {
                 @Override
                 public void onFailure(@NonNull Exception e) {
-                    Toast.makeText(context, e.getMessage(), Toast.LENGTH_LONG).show();
+//                    Toast.makeText(context, e.getMessage(), Toast.LENGTH_LONG).show();
+                    Message.message(context, e.getMessage());
                 }
             });
     }
@@ -88,7 +91,7 @@ public class DBHelper {
             @Override
             public void onSuccess(DocumentSnapshot documentSnapshot) {
                 if (documentSnapshot.exists()) {
-                    user = documentSnapshot.toObject(User.class);
+                    varauser = documentSnapshot.toObject(VaraUser.class);
                     update.updateUI();
                 } else {
                 }
@@ -96,7 +99,8 @@ public class DBHelper {
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
-                Toast.makeText(context, "Cannot load the user information", Toast.LENGTH_LONG).show();
+//                Toast.makeText(context, "Cannot load the user information", Toast.LENGTH_LONG).show();
+                Message.message(context, "Cannot load the user information");
                 Intent intent = new Intent(context, MainActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent);
@@ -104,7 +108,7 @@ public class DBHelper {
         });
     }
 
-    public static void updateUserProfile(final User user) {
+    public static void updateUserProfile(final VaraUser user) {
         docRef.update(
                 "firstName", user.getFirstName(),
                 "lastName", user.getLastName(),
@@ -130,14 +134,16 @@ public class DBHelper {
                             @Override
                             public void onSuccess(DocumentSnapshot documentSnapshot) {
                                 if (documentSnapshot.exists()) {
-                                    user = documentSnapshot.toObject(User.class);
-                                    Toast.makeText(context, "Sign-in Successful", Toast.LENGTH_SHORT).show();
+                                    varauser = documentSnapshot.toObject(VaraUser.class);
+//                                    Toast.makeText(context, "Sign-in Successful", Toast.LENGTH_SHORT).show();
+                                    Message.message(context,"Sign-in Successful" );
                                     Intent intent = new Intent(context, LogoActivity.class);
                                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                                     context.startActivity(intent);
                                 } else {
                                     // If sign in fails, display a message to the user.
-                                    Toast.makeText(context, "Sign-in failed", Toast.LENGTH_LONG).show();
+//                                    Toast.makeText(context, "Sign-in failed", Toast.LENGTH_LONG).show();
+                                    Message.message(context, "Sign-in failed");
                                 }
                             }
                         });
@@ -147,7 +153,8 @@ public class DBHelper {
             .addOnFailureListener(new OnFailureListener() {
                 @Override
                 public void onFailure(@NonNull Exception e) {
-                    Toast.makeText(context, e.getMessage(), Toast.LENGTH_LONG).show();
+//                    Toast.makeText(context, e.getMessage(), Toast.LENGTH_LONG).show();
+                    Message.message(context, e.getMessage());
                 }
             });
     }
@@ -155,7 +162,7 @@ public class DBHelper {
     public static void signOut() {
         fAUTH.signOut();
         userId = null;
-        user = null;
+        varauser = null;
     }
 
 }
