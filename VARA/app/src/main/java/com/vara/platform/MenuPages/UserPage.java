@@ -1,4 +1,4 @@
-package com.vara.platform;
+package com.vara.platform.MenuPages;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,12 +7,11 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.google.firebase.firestore.auth.User;
 import com.vara.platform.HelperMethods.DBHelper;
-
-import com.vara.platform.Models.VaraUser;
+import com.vara.platform.LoginActivity;
+import com.vara.platform.Models.User;
 import com.vara.platform.Models.ViewArray;
+import com.vara.platform.R;
 
 public class UserPage extends AppCompatActivity {
 
@@ -21,8 +20,8 @@ public class UserPage extends AppCompatActivity {
     EditText firstNameET, lastNameET, phoneET, cityET;
     ImageButton editButton, saveButton, backButton;
     ViewArray userTVs, userETs;
-    VaraUser currentUserInfo;
-    VaraUser updatedUserInfo;
+    User currentUserInfo;
+    User updatedUserInfo;
 
 
     @Override
@@ -70,7 +69,7 @@ public class UserPage extends AppCompatActivity {
                 saveButton.setVisibility(View.GONE);
 
                 //creating a new user with the updated inputs
-                updatedUserInfo = new VaraUser(
+                updatedUserInfo = new User(
                         firstNameET.getText().toString(),
                         lastNameET.getText().toString(),
                         phoneET.getText().toString(),
