@@ -100,7 +100,7 @@
     <TextView
         android:id="@+id/textView5"
         android:layout_width="1140dp"
-        android:layout_height="56dp"
+        android:layout_height="65dp"
         android:layout_marginStart="64dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="64dp"
@@ -110,7 +110,7 @@
         android:textAlignment="center"
         android:textColor="#E72EBE"
         android:textSize="40sp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView6"
+        app:layout_constraintBottom_toTopOf="@+id/textView6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -120,7 +120,7 @@
     <TextView
         android:id="@+id/textView6"
         android:layout_width="1144dp"
-        android:layout_height="48dp"
+        android:layout_height="50dp"
         android:layout_marginStart="64dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="64dp"
