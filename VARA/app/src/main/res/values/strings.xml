@@ -20,7 +20,7 @@
     <string name="phone">Phone Number</string>
     <string name="city">City</string>
 
-    <string name="user_information">User Information</string>
+    <string name="user_information">User Profile Information</string>
 
     <string name="nativeas_ad_unit_id" translatable="false">ca-app-pub-9220432525424100/8387801575</string>
     <string name="label_SignOff" translatable="false">Sign Off</string>
