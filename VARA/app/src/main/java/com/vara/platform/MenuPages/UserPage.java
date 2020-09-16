@@ -7,10 +7,9 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.vara.platform.HelperMethods.VaraDbHelperFb;
-import com.vara.platform.Models.VaraUser;
 import com.vara.platform.LoginActivity;
+import com.vara.platform.Models.VaraUser;
 import com.vara.platform.Models.ViewArray;
 import com.vara.platform.R;
 

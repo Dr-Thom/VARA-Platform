@@ -135,7 +135,7 @@ public class VaraDbHelperFb {
                                 if (documentSnapshot.exists()) {
                                     varauser = documentSnapshot.toObject(VaraUser.class);
 //                                    Toast.makeText(context, "Sign-in Successful", Toast.LENGTH_SHORT).show();
-                                    Message.message(context, "Sign-in Successful");
+                                    Message.message(context,"Sign-in Successful" );
                                     Intent intent = new Intent(context, LogoActivity.class);
                                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                                     context.startActivity(intent);
