@@ -8,6 +8,7 @@ import android.widget.Button;
 
 import com.vara.platform.HelperMethods.VaraDbHelperFb;
 import com.vara.platform.MenuPages.UserPage;
+import com.vara.platform.HelperMethods.VaraDbHelperSql;
 
 public class MainActivity extends AppCompatActivity {
     Button signup, backButton;
