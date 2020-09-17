@@ -42,7 +42,7 @@ public class WelcomeMsg extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }
-        }, 20000);
+        }, 25000);
     }
     private void displayMsg() {
        Timer t = new Timer();
@@ -62,7 +62,7 @@ public class WelcomeMsg extends AppCompatActivity {
                         }
                     });
                 }
-            }, (a = a + 3000));
+            }, (a = a + 4000));
         };
     }
 }
