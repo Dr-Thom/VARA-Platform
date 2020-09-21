@@ -20,7 +20,7 @@
     <string name="phone">Phone Number</string>
     <string name="city">City</string>
 
-    <string name="user_information">User Information</string>
+    <string name="user_information">User Profile Information</string>
 
     <string name="nativeas_ad_unit_id" translatable="false">ca-app-pub-9220432525424100/8387801575</string>
     <string name="label_SignOff" translatable="false">Sign Off</string>
@@ -29,12 +29,13 @@
     <string name="farewell_msg_body">Thank you for watching our sponsors and the important info they shared with you. please patronize these sponsors since they are paying to keep fare costs down while giving a better income to your driver, you are entitled to special discounts for participating.If you would like more information on these special discounts, please tap the flowing \'YES\' button and we\'ll follow up with an email that includes your personal discounts.</string>
     <string name="farewell_email">varaplatformtest@gmail.com</string>
 
-    <string name="welcome_1">Welcome! • this platform is brought to you on behalf of your Lyft driver</string>
-    <string name="welcome_2">• in order to keep fares down but at the same time assist your drivers with a better income for sharing their car, they have authorized the presentation of this programing and promotional material</string>
-    <string name="welcome_3">• the businesses who make this possible thank you for your participation and we ask that you patronize them</string>
-    <string name="welcome_4">• additional promotinal discounts, for more savings, will be presented to you at the end of your trip</string>
-    <string name="welcome_5">• if you have any further questions or suggestions please email us at varaplatformtest@gmail.com</string>
-    <string name="welcome_6">• thank you for your participation, the VARA team</string>
+    <string name="welcome_title">Welcome!</string>
+    <string name="welcome_1">• This service is brought to you on behalf of your driver</string>
+    <string name="welcome_2">• It keeps fares down and boosts your driver\'s per-ride earnings</string>
+    <string name="welcome_3">• Vara offers promotional discounts and savings opportunities</string>
+    <string name="welcome_4">• Businesses make this possible, your participation supports those businesses</string>
+    <string name="welcome_5">Thank You for your participation, the VARA team</string>
+    <string name="welcome_6">If you have any further questions or suggestions please email us at varaplatformtest@gmail.com</string>
 
 
 </resources>

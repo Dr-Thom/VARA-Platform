@@ -57,6 +57,7 @@ public class VaraDbHelperFb {
                     userId = Objects.requireNonNull(fAUTH.getCurrentUser()).getUid();
 //                    Toast.makeText(context, "Sign-up successful", Toast.LENGTH_LONG).show();
                     Message.message(context, "Sign-up successful");
+
                     docRef = fstor.collection("UserInfo").document(userId);
 
                     docRef.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
@@ -135,7 +136,7 @@ public class VaraDbHelperFb {
                                 if (documentSnapshot.exists()) {
                                     varauser = documentSnapshot.toObject(VaraUser.class);
 //                                    Toast.makeText(context, "Sign-in Successful", Toast.LENGTH_SHORT).show();
-                                    Message.message(context, "Sign-in Successful");
+                                    Message.message(context,"Sign-in Successful" );
                                     Intent intent = new Intent(context, LogoActivity.class);
                                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                                     context.startActivity(intent);
