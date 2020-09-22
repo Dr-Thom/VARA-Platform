@@ -9,54 +9,24 @@
 
     <ImageView
         android:id="@+id/imgLogo"
-        android:layout_width="185dp"
-        android:layout_height="150dp"
+        android:layout_width="600dp"
+        android:layout_height="500dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="540dp"
-        android:layout_marginTop="75dp"
-        android:layout_marginEnd="540dp"
+        android:layout_marginStart="419dp"
+        android:layout_marginTop="141dp"
+        android:layout_marginEnd="462dp"
         android:alpha="100"
         android:background="#00000000"
         android:contentDescription="@string/logo"
         android:cropToPadding="true"
-        android:foreground="@drawable/logo"
+        android:foreground="@drawable/vara_logo"
         android:padding="250dp"
         android:scaleType="centerInside"
         android:scaleX="1"
         android:scaleY="1"
         tools:targetApi="m" />
-
-    <TextView
-        android:id="@+id/txtTitle"
-        android:layout_width="320dp"
-        android:layout_height="130dp"
-        android:layout_below="@+id/imgLogo"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="45dp"
-        android:text="@string/app_name"
-        android:textAlignment="center"
-        android:textColor="#F2F2F2"
-        android:textSize="100sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/txtMoto"
-        android:layout_width="600dp"
-        android:layout_height="70dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginEnd="337dp"
-        android:layout_marginBottom="250dp"
-        android:alpha="100"
-        android:text="@string/moto"
-        android:textAlignment="center"
-        android:textColor="@color/colorPink"
-        android:textSize="48sp"
-        android:textStyle="bold"
-        android:typeface="normal" />
 
     <Button
         android:id="@+id/signOffButton"
